@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Delivery | Admin Medicines</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="assets/css/admin-medicines.css">
+</head>
+<body>
+    <!--- Admin Medicines Dashboard Start --->
+    <div class="pd-dsh-dashboard">
+        <!--- Sidebar --->
+        <aside class="pd-dsh-sidebar" id="pdDshSidebar">
+            <div class="pd-dsh-sidebar-logo">
+                <a href="index.html">
+                    <img src="assets/images/brand-logo.webp" alt="Pharmacy Delivery">
+                </a>
+            </div>
+            <div class="pd-dsh-sidebar-user">
+                <div class="pd-dsh-sidebar-user-image">
+                    <img src="assets/images/profile-2.webp" alt="Profile">
+                </div>
+                <div>
+                    <small>Signed in as</small>
+                    <strong id="pdDshSidebarEmail">Loading...</strong>
+                </div>
+            </div>
+            <!--- Sidebar Navigation --->
+            <nav class="pd-dsh-sidebar-nav">
+                <a href="admin-dashboard.html" class="pd-dsh-sidebar-link" data-page="admin-dashboard.html">
+                    <span class="pd-dsh-sidebar-link-icon"><i class="bi bi-grid-1x2"></i></span>
+                    <span>Dashboard</span>
+                    <i class="bi bi-chevron-right"></i>
+                </a>
+                <a href="admin-orders.html" class="pd-dsh-sidebar-link" data-page="admin-orders.html">
+                    <span class="pd-dsh-sidebar-link-icon"><i class="bi bi-cart"></i></span>
+                    <span>Orders</span>
+                    <i class="bi bi-chevron-right"></i>
+                </a>
+                <a href="admin-medicines.html" class="pd-dsh-sidebar-link active" data-page="admin-medicines.html">
+                    <span class="pd-dsh-sidebar-link-icon"><i class="bi bi-capsule"></i></span>
+                    <span>Medicines</span>
+                    <i class="bi bi-chevron-right"></i>
+                </a>
+                <a href="admin-profile.html" class="pd-dsh-sidebar-link" data-page="admin-profile.html">
+                    <span class="pd-dsh-sidebar-link-icon"><i class="bi bi-person"></i></span>
+                    <span>Profile</span>
+                    <i class="bi bi-chevron-right"></i>
+                </a>
+                <button type="button" class="pd-dsh-sidebar-link pd-dsh-logout" id="pdDshLogout">
+                    <span class="pd-dsh-sidebar-link-icon"><i class="bi bi-box-arrow-right"></i></span>
+                    <span>Logout</span>
+                    <i class="bi bi-chevron-right"></i>
+                </button>
+            </nav>
+        </aside>
+
+        <div class="pd-dsh-sidebar-overlay" id="pdDshSidebarOverlay"></div>
+
+        <!--- Main --->
+        <main class="pd-dsh-main">
+            <!--- Topbar --->
+            <header class="pd-dsh-topbar">
+                <div class="pd-dsh-topbar-left">
+                    <button type="button" class="pd-dsh-menu-toggle" id="pdDshMenuToggle" aria-label="Open menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="pd-dsh-page-title">
+                        <span>Admin Panel</span>
+                        <h1>Medicines</h1>
+                    </div>
+                </div>
+                <div class="pd-dsh-topbar-right">
+                    <div class="pd-dsh-topbar-user">
+                        <div class="pd-dsh-topbar-user-text">
+                            <small>Signed in as</small>
+                            <strong id="pdDshTopbarEmail">Loading...</strong>
+                        </div>
+                        <div class="pd-dsh-topbar-avatar">
+                            <img src="assets/images/profile-2.webp" alt="Profile">
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!--- Medicines Content --->
+            <div class="pd-dsh-content">
+                <div class="container-fluid">
+
+                    <!--- Page Heading --->
+                    <section class="pd-adm-med-heading">
+                        <div>
+                            <span class="pd-adm-med-kicker">
+                                <i class="bi bi-capsule"></i>
+                                Medicine Management
+                            </span>
+                            <h2>Manage Your Medicines</h2>
+                            <p>Add, update and manage the medicines available on your pharmacy platform.</p>
+                        </div>
+                        <button type="button" class="pd-adm-med-add-btn" id="pdAdminMedicinesAdd">
+                            <i class="bi bi-plus-lg"></i>
+                            <span>Add Medicine</span>
+                        </button>
+                    </section>
+
+                    <!--- Medicine Statistics --->
+                    <section class="pd-adm-med-stats">
+                        <div class="pd-adm-med-stat-card">
+                            <div class="pd-adm-med-stat-icon">
+                                <i class="bi bi-capsule"></i>
+                            </div>
+                            <div>
+                                <small>Total Medicines</small>
+                                <strong id="pdAdminMedicinesTotal">0</strong>
+                                <span>Available in catalog</span>
+                            </div>
+                        </div>
+                        <div class="pd-adm-med-stat-card">
+                            <div class="pd-adm-med-stat-icon">
+                                <i class="bi bi-check-circle"></i>
+                            </div>
+                            <div>
+                                <small>In Stock</small>
+                                <strong id="pdAdminMedicinesInStock">0</strong>
+                                <span>Currently available</span>
+                            </div>
+                        </div>
+                        <div class="pd-adm-med-stat-card">
+                            <div class="pd-adm-med-stat-icon">
+                                <i class="bi bi-exclamation-circle"></i>
+                            </div>
+                            <div>
+                                <small>Low Stock</small>
+                                <strong id="pdAdminMedicinesLowStock">0</strong>
+                                <span>Needs attention</span>
+                            </div>
+                        </div>
+                        <div class="pd-adm-med-stat-card">
+                            <div class="pd-adm-med-stat-icon">
+                                <i class="bi bi-slash-circle"></i>
+                            </div>
+                            <div>
+                                <small>Out of Stock</small>
+                                <strong id="pdAdminMedicinesOutStock">0</strong>
+                                <span>Currently unavailable</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!--- Medicine Management Card --->
+                    <section class="pd-adm-med-card">
+
+                        <!--- Toolbar --->
+                        <div class="pd-adm-med-toolbar">
+                            <div class="pd-adm-med-toolbar-title">
+                                <span>Medicine Catalog</span>
+                                <strong id="pdAdminMedicinesCount">0 Medicines</strong>
+                            </div>
+
+                            <div class="pd-adm-med-filters">
+                                <div class="pd-adm-med-search">
+                                    <i class="bi bi-search"></i>
+                                    <input type="search" id="pdAdminMedicinesSearch" placeholder="Search medicines...">
+                                </div>
+
+                                <div class="pd-adm-med-select">
+                                    <select id="pdAdminMedicinesCategory">
+                                        <option value="">All Categories</option>
+                                        <option value="Pain Relief">Pain Relief</option>
+                                        <option value="Cold & Flu">Cold & Flu</option>
+                                        <option value="Vitamins">Vitamins</option>
+                                        <option value="Digestive Care">Digestive Care</option>
+                                        <option value="First Aid">First Aid</option>
+                                    </select>
+                                    <i class="bi bi-chevron-down"></i>
+                                </div>
+
+                                <div class="pd-adm-med-select">
+                                    <select id="pdAdminMedicinesStock">
+                                        <option value="">All Stock</option>
+                                        <option value="in-stock">In Stock</option>
+                                        <option value="low-stock">Low Stock</option>
+                                        <option value="out-of-stock">Out of Stock</option>
+                                    </select>
+                                    <i class="bi bi-chevron-down"></i>
+                                </div>
+
+                                <button type="button" class="pd-adm-med-clear" id="pdAdminMedicinesClear">
+                                    <i class="bi bi-arrow-counterclockwise"></i>
+                                    <span>Clear</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!--- Medicine Table --->
+                        <div class="pd-adm-med-table-wrap">
+                            <table class="pd-adm-med-table">
+                                <thead>
+                                    <tr>
+                                        <th>Medicine</th>
+                                        <th>Category</th>
+                                        <th>Price</th>
+                                        <th>Stock</th>
+                                        <th>Prescription</th>
+                                        <th>Updated</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="pdAdminMedicinesTable">
+
+                                    <tr class="pd-adm-med-row"
+                                        data-name="Paracetamol 500mg Tablets"
+                                        data-category="Pain Relief"
+                                        data-stock="in-stock"
+                                        data-price="₹25"
+                                        data-stock-count="120"
+                                        data-prescription="No"
+                                        data-updated="05 Sep 2026">
+                                        <td>
+                                            <div class="pd-adm-med-product">
+                                                <div class="pd-adm-med-product-image">
+                                                    <img src="assets/images/medicine-paracetamol.webp" alt="Paracetamol">
+                                                </div>
+                                                <div>
+                                                    <strong>Paracetamol 500mg Tablets</strong>
+                                                    <span>10 Tablets</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="pd-adm-med-category">Pain Relief</span></td>
+                                        <td><strong class="pd-adm-med-price">₹25</strong></td>
+                                        <td>
+                                            <div class="pd-adm-med-stock-wrap">
+                                                <span class="pd-adm-med-stock pd-adm-med-stock-in-stock">In Stock</span>
+                                                <small>120 units</small>
+                                            </div>
+                                        </td>
+                                        <td><span class="pd-adm-med-prescription no">Not Required</span></td>
+                                        <td><span class="pd-adm-med-date">05 Sep 2026</span></td>
+                                        <td>
+                                            <div class="pd-adm-med-actions">
+                                                <button type="button" class="pd-adm-med-action pd-adm-med-view" title="View">
+                                                    <i class="bi bi-eye"></i>
+                                                </button>
+                                                <button type="button" class="pd-adm-med-action pd-adm-med-edit" title="Edit">
+                                                    <i class="bi bi-pencil"></i>
+                                                </button>
+                                                <button type="button" class="pd-adm-med-action pd-adm-med-delete" title="Delete">
+                                                    <i class="bi bi-trash3"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="pd-adm-med-row"
+                                        data-name="Cetirizine 10mg Tablets"
+                                        data-category="Cold & Flu"
+                                        data-stock="low-stock"
+                                        data-price="₹42"
+                                        data-stock-count="18"
+                                        data-prescription="No"
+                                        data-updated="04 Sep 2026">
+                                        <td>
+                                            <div class="pd-adm-med-product">
+                                                <div class="pd-adm-med-product-image">
+                                                    <img src="assets/images/multivitamin.webp" alt="Cetirizine">
+                                                </div>
+                                                <div>
+                                                    <strong>Cetirizine 10mg Tablets</strong>
+                                                    <span>10 Tablets</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="pd-adm-med-category">Cold & Flu</span></td>
+                                        <td><strong class="pd-adm-med-price">₹42</strong></td>
+                                        <td>
+                                            <div class="pd-adm-med-stock-wrap">
+                                                <span class="pd-adm-med-stock pd-adm-med-stock-low-stock">Low Stock</span>
+                                                <small>18 units</small>
+                                            </div>
+                                        </td>
+                                        <td><span class="pd-adm-med-prescription no">Not Required</span></td>
+                                        <td><span class="pd-adm-med-date">04 Sep 2026</span></td>
+                                        <td>
+                                            <div class="pd-adm-med-actions">
+                                                <button type="button" class="pd-adm-med-action pd-adm-med-view" title="View">
+                                                    <i class="bi bi-eye"></i>
+                                                </button>
+                                                <button type="button" class="pd-adm-med-action pd-adm-med-edit" title="Edit">
+                                                    <i class="bi bi-pencil"></i>
+                                                </button>
+                                                <button type="button" class="pd-adm-med-action pd-adm-med-delete" title="Delete">
+                                                    <i class="bi bi-trash3"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="pd-adm-med-row"
+                                        data-name="Vitamin D3 1000 IU Capsules"
+                                        data-category="Vitamins"
+                                        data-stock="in-stock"
+                                        data-price="₹180"
+                                        data-stock-count="75"
+                                        data-prescription="No"
+                                        data-updated="03 Sep 2026">
+                                        <td>
+                                            <div class="pd-adm-med-product">
+                                                <div class="pd-adm-med-product-image">
+                                                    <img src="assets/images/medicine-vitamin.webp" alt="Vitamin D3">
+                                                </div>
+                                                <div>
+                                                    <strong>Vitamin D3 1000 IU Capsules</strong>
+                                                    <span>30 Capsules</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="pd-adm-med-category">Vitamins</span></td>
+                                        <td><strong class="pd-adm-med-price">₹180</strong></td>
+                                        <td>
+                                            <div class="pd-adm-med-stock-wrap">
+                                                <span class="pd-adm-med-stock pd-adm-med-stock-in-stock">In Stock</span>
+                                                <small>75 units</small>
+                                            </div>
+                                        </td>
+                                        <td><span class="pd-adm-med-prescription no">Not Required</span></td>
+                                        <td><span class="pd-adm-med-date">03 Sep 2026</span></td>
+                                        <td>
+                                            <div class="pd-adm-med-actions">
+                                                <button type="button" class="pd-adm-med-action pd-adm-med-view" title="View">
+                                                    <i class="bi bi-eye"></i>
+                                                </button>
+                                                <button type="button" class="pd-adm-med-action pd-adm-med-edit" title="Edit">
+                                                    <i class="bi bi-pencil"></i>
+                                                </button>
+                                                <button type="button" class="pd-adm-med-action pd-adm-med-delete" title="Delete">
+                                                    <i class="bi bi-trash3"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="pd-adm-med-row"
+                                        data-name="Omeprazole 20mg Capsules"
+                                        data-category="Digestive Care"
+                                        data-stock="out-of-stock"
+                                        data-price="₹95"
+                                        data-stock-count="0"
+                                        data-prescription="Yes"
+                                        data-updated="02 Sep 2026">
+                                        <td>
+                                            <div class="pd-adm-med-product">
+                                                <div class="pd-adm-med-product-image">
+                                                    <img src="assets/images/calcium.webp" alt="Omeprazole">
+                                                </div>
+                                                <div>
+                                                    <strong>Omeprazole 20mg Capsules</strong>
+                                                    <span>15 Capsules</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="pd-adm-med-category">Digestive Care</span></td>
+                                        <td><strong class="pd-adm-med-price">₹95</strong></td>
+                                        <td>
+                                            <div class="pd-adm-med-stock-wrap">
+                                                <span class="pd-adm-med-stock pd-adm-med-stock-out-of-stock">Out of Stock</span>
+                                                <small>0 units</small>
+                                            </div>
+                                        </td>
+                                        <td><span class="pd-adm-med-prescription yes">Required</span></td>
+                                        <td><span class="pd-adm-med-date">02 Sep 2026</span></td>
+                                        <td>
+                                            <div class="pd-adm-med-actions">
+                                                <button type="button" class="pd-adm-med-action pd-adm-med-view" title="View">
+                                                    <i class="bi bi-eye"></i>
+                                                </button>
+                                                <button type="button" class="pd-adm-med-action pd-adm-med-edit" title="Edit">
+                                                    <i class="bi bi-pencil"></i>
+                                                </button>
+                                                <button type="button" class="pd-adm-med-action pd-adm-med-delete" title="Delete">
+                                                    <i class="bi bi-trash3"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="pd-adm-med-row"
+                                        data-name="Antiseptic First Aid Solution"
+                                        data-category="First Aid"
+                                        data-stock="in-stock"
+                                        data-price="₹85"
+                                        data-stock-count="54"
+                                        data-prescription="No"
+                                        data-updated="01 Sep 2026">
+                                        <td>
+                                            <div class="pd-adm-med-product">
+                                                <div class="pd-adm-med-product-image">
+                                                    <img src="assets/images/antiseptic.webp" alt="Antiseptic">
+                                                </div>
+                                                <div>
+                                                    <strong>Antiseptic First Aid Solution</strong>
+                                                    <span>100ml Bottle</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="pd-adm-med-category">First Aid</span></td>
+                                        <td><strong class="pd-adm-med-price">₹85</strong></td>
+                                        <td>
+                                            <div class="pd-adm-med-stock-wrap">
+                                                <span class="pd-adm-med-stock pd-adm-med-stock-in-stock">In Stock</span>
+                                                <small>54 units</small>
+                                            </div>
+                                        </td>
+                                        <td><span class="pd-adm-med-prescription no">Not Required</span></td>
+                                        <td><span class="pd-adm-med-date">01 Sep 2026</span></td>
+                                        <td>
+                                            <div class="pd-adm-med-actions">
+                                                <button type="button" class="pd-adm-med-action pd-adm-med-view" title="View">
+                                                    <i class="bi bi-eye"></i>
+                                                </button>
+                                                <button type="button" class="pd-adm-med-action pd-adm-med-edit" title="Edit">
+                                                    <i class="bi bi-pencil"></i>
+                                                </button>
+                                                <button type="button" class="pd-adm-med-action pd-adm-med-delete" title="Delete">
+                                                    <i class="bi bi-trash3"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!--- Empty State --->
+                        <div class="pd-adm-med-empty" id="pdAdminMedicinesEmpty">
+                            <div class="pd-adm-med-empty-icon">
+                                <i class="bi bi-search"></i>
+                            </div>
+                            <h3>No Medicines Found</h3>
+                            <p>Try changing your search or filter options.</p>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </main>
+    </div>
+    <!--- Admin Medicines Dashboard End --->
+
+    <!--- Medicine Modal --->
+    <div class="pd-adm-med-modal" id="pdAdminMedicinesModal">
+        <div class="pd-adm-med-modal-overlay" id="pdAdminMedicinesModalOverlay"></div>
+        <div class="pd-adm-med-modal-card">
+            <div class="pd-adm-med-modal-head">
+                <div>
+                    <span id="pdAdminMedicinesModalKicker">Add Medicine</span>
+                    <h2 id="pdAdminMedicinesModalTitle">Add New Medicine</h2>
+                </div>
+                <button type="button" id="pdAdminMedicinesModalClose">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+
+            <form id="pdAdminMedicinesForm">
+                <input type="hidden" id="pdAdminMedicinesEditId">
+
+                <div class="pd-adm-med-form-grid">
+                    <div class="pd-adm-med-form-field">
+                        <label for="pdAdminMedicineName">Medicine Name</label>
+                        <input type="text" id="pdAdminMedicineName" placeholder="Enter medicine name" required>
+                    </div>
+
+                    <div class="pd-adm-med-form-field">
+                        <label for="pdAdminMedicineCategory">Category</label>
+                        <select id="pdAdminMedicineCategoryForm" required>
+                            <option value="">Select category</option>
+                            <option value="Pain Relief">Pain Relief</option>
+                            <option value="Cold & Flu">Cold & Flu</option>
+                            <option value="Vitamins">Vitamins</option>
+                            <option value="Digestive Care">Digestive Care</option>
+                            <option value="First Aid">First Aid</option>
+                        </select>
+                    </div>
+
+                    <div class="pd-adm-med-form-field">
+                        <label for="pdAdminMedicinePrice">Price</label>
+                        <input type="number" id="pdAdminMedicinePrice" min="0" step="0.01" placeholder="Enter price" required>
+                    </div>
+
+                    <div class="pd-adm-med-form-field">
+                        <label for="pdAdminMedicineStock">Stock Quantity</label>
+                        <input type="number" id="pdAdminMedicineStock" min="0" placeholder="Enter stock quantity" required>
+                    </div>
+
+                    <div class="pd-adm-med-form-field">
+                        <label for="pdAdminMedicinePack">Pack Information</label>
+                        <input type="text" id="pdAdminMedicinePack" placeholder="Example: 10 Tablets" required>
+                    </div>
+
+                    <div class="pd-adm-med-form-field">
+                        <label for="pdAdminMedicinePrescription">Prescription</label>
+                        <select id="pdAdminMedicinePrescription" required>
+                            <option value="No">Not Required</option>
+                            <option value="Yes">Required</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="pd-adm-med-modal-actions">
+                    <button type="button" class="pd-adm-med-cancel" id="pdAdminMedicinesCancel">Cancel</button>
+                    <button type="submit" class="pd-adm-med-save">
+                        <i class="bi bi-check-lg"></i>
+                        <span>Save Medicine</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/admin-medicines.js"></script>
+</body>
+</html>

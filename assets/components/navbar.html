@@ -1,0 +1,78 @@
+<!--- NavBar Start --->
+<nav class="pd-nav-navbar">
+<div class="container">
+<div class="pd-nav-navbar-wrapper">
+<!--- Logo --->
+<a href="index.html" class="pd-nav-navbar-logo">
+<img src="assets/images/brand-logo.webp" alt="Pharmacy Delivery Platform Logo">
+</a>
+<!--- Desktop Navigation --->
+<div class="pd-nav-navbar-menu">
+<a href="index.html" class="pd-nav-navbar-link">Home</a>
+<a href="about.html" class="pd-nav-navbar-link">About</a>
+<a href="medicines.html" class="pd-nav-navbar-link">Medicines</a>
+<a href="prescription.html" class="pd-nav-navbar-link">Prescription</a>
+<a href="contact.html" class="pd-nav-navbar-link">Contact</a>
+</div>
+<!--- Navbar Actions --->
+<div class="pd-nav-navbar-actions">
+<a href="cart.html" class="pd-nav-navbar-cart" aria-label="Shopping Cart">
+<i class="bi bi-bag-heart"></i>
+<span class="pd-nav-navbar-cart-count" id="pdNavbarCartCount">0</span>
+</a>
+<a href="login.html" class="pd-nav-navbar-login">
+<i class="bi bi-person-circle"></i>
+<span>Login</span>
+</a>
+<button class="pd-nav-navbar-toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#pdNavbarOffcanvas" aria-controls="pdNavbarOffcanvas" aria-label="Open Navigation">
+<span></span>
+<span></span>
+<span></span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<!--- Mobile Offcanvas Start --->
+<div class="offcanvas offcanvas-end pd-nav-navbar-offcanvas" tabindex="-1" id="pdNavbarOffcanvas" aria-labelledby="pdNavbarOffcanvasLabel">
+<div class="pd-nav-navbar-offcanvas-header">
+<a href="index.html" class="pd-nav-navbar-offcanvas-logo">
+<img src="assets/images/brand-logo.webp" alt="Pharmacy Delivery Platform Logo">
+</a>
+<button type="button" class="pd-nav-navbar-offcanvas-close" data-bs-dismiss="offcanvas" aria-label="Close">
+<i class="bi bi-x-lg"></i>
+</button>
+</div>
+<div class="offcanvas-body">
+<!--- Mobile Navigation --->
+<div class="pd-nav-navbar-mobile">
+<a href="index.html" class="pd-nav-navbar-mobile-link"><i class="bi bi-house-door"></i><span>Home</span><i class="bi bi-arrow-right"></i></a>
+<a href="about.html" class="pd-nav-navbar-mobile-link"><i class="bi bi-heart-pulse"></i><span>About</span><i class="bi bi-arrow-right"></i></a>
+<a href="medicines.html" class="pd-nav-navbar-mobile-link"><i class="bi bi-capsule"></i><span>Medicines</span><i class="bi bi-arrow-right"></i></a>
+<a href="prescription.html" class="pd-nav-navbar-mobile-link"><i class="bi bi-file-earmark-medical"></i><span>Prescription</span><i class="bi bi-arrow-right"></i></a>
+<a href="contact.html" class="pd-nav-navbar-mobile-link"><i class="bi bi-headset"></i><span>Contact</span><i class="bi bi-arrow-right"></i></a>
+</div>
+<!--- Mobile Cart --->
+<a href="cart.html" class="pd-nav-navbar-mobile-cart">
+<span class="pd-nav-navbar-mobile-cart-icon"><i class="bi bi-bag-heart"></i></span>
+<span class="pd-nav-navbar-mobile-cart-content"><small>Your Cart</small><strong id="pdNavbarMobileCartItems">0 Items</strong></span>
+<i class="bi bi-arrow-right"></i>
+</a>
+<!--- Mobile Login --->
+<a href="login.html" class="pd-nav-navbar-mobile-login">
+<i class="bi bi-person-circle"></i>
+<span>Login to Account</span>
+<i class="bi bi-arrow-right"></i>
+</a>
+<!--- Mobile Support Card --->
+<div class="pd-nav-navbar-mobile-support">
+<div class="pd-nav-navbar-mobile-support-icon"><i class="bi bi-headset"></i></div>
+<div>
+<small>Need medical assistance?</small>
+<strong>Talk to our pharmacist</strong>
+</div>
+</div>
+</div>
+</div>
+<!--- Mobile Offcanvas End --->
+<!--- NavBar End --->

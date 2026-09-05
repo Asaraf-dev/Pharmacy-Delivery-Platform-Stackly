@@ -1,0 +1,451 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pharmacy Delivery | Prescription</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Main favicon -->
+    <link rel="icon" href="favicon.ico" />
+
+    <!-- webp favicons -->
+    <link rel="icon" type="image/webp" sizes="16x16" href="assets/images/favicon-16x16.png" />
+    <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/favicon-32x32.png" />
+
+    <!-- Apple -->
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+
+    <!-- Android -->
+    <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/android-chrome-192x192.png" />
+    <link rel="icon" type="image/webp" sizes="512x512" href="assets/images/android-chrome-512x512.png" />
+
+    <!-- Manifest -->
+    <link rel="manifest" href="assets/images/site.webmanifest" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!--- Bootstrap Icon --->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/loader.css" />
+    <link rel="stylesheet" href="assets/css/navbar.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+    <!--- Loader Start --->
+    <div id="pdLdrLoader" class="pd-ldr-loader">
+        <div class="pd-ldr-background">
+            <span class="pd-ldr-particle pd-ldr-particle-1"></span>
+            <span class="pd-ldr-particle pd-ldr-particle-2"></span>
+            <span class="pd-ldr-particle pd-ldr-particle-3"></span>
+            <span class="pd-ldr-particle pd-ldr-particle-4"></span>
+            <span class="pd-ldr-particle pd-ldr-particle-5"></span>
+            <span class="pd-ldr-particle pd-ldr-particle-6"></span>
+        </div>
+        <div class="pd-ldr-content">
+            <div class="pd-ldr-logo">
+                <img src="assets/images/brand-logo.webp" alt="Pharmacy Delivery Platform">
+            </div>
+            <div class="pd-ldr-medical-orbit">
+                <div class="pd-ldr-orbit pd-ldr-orbit-outer"></div>
+                <div class="pd-ldr-orbit pd-ldr-orbit-middle"></div>
+                <div class="pd-ldr-orbit pd-ldr-orbit-inner"></div>
+                <div class="pd-ldr-orbit-icon pd-ldr-orbit-icon-1"><i class="bi bi-capsule"></i></div>
+                <div class="pd-ldr-orbit-icon pd-ldr-orbit-icon-2"><i class="bi bi-heart-pulse"></i></div>
+                <div class="pd-ldr-orbit-icon pd-ldr-orbit-icon-3"><i class="bi bi-shield-check"></i></div>
+                <div class="pd-ldr-core">
+                    <div class="pd-ldr-core-pulse"></div>
+                    <div class="pd-ldr-core-icon"><i class="bi bi-plus-lg"></i></div>
+                </div>
+            </div>
+            <div class="pd-ldr-message-wrap">
+                <span class="pd-ldr-message" id="pdLdrMessage">Preparing your healthcare...</span>
+                <div class="pd-ldr-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--- Loader End --->
+
+    <!--- NavBar --->
+    <div id="pd-navbar-component"></div>
+
+    <!--- Inner Hero Section Start --->
+    <section class="pd-sub-hero">
+        <div class="container">
+            <div class="pd-sub-hero-wrapper">
+                <!--- Hero Content --->
+                <div class="pd-sub-hero-content">
+                    <div class="pd-sub-hero-breadcrumb">
+                        <a href="index.html">Home</a>
+                        <i class="bi bi-chevron-right"></i>
+                        <span>Prescription</span>
+                    </div>
+                    <span class="pd-sub-hero-eyebrow"><i class="bi bi-file-earmark-medical-fill"></i> PRESCRIPTION
+                        CARE</span>
+                    <h1 class="pd-sub-hero-title">Upload Your Prescription, <span>We'll Handle The Rest.</span></h1>
+                    <p class="pd-sub-hero-des">Send us your prescription securely and make ordering your medicines quick
+                        and effortless.</p>
+                </div>
+                <!--- Hero Visual --->
+                <div class="pd-sub-hero-visual">
+                    <div class="pd-sub-hero-orbit pd-sub-hero-orbit-one"></div>
+                    <div class="pd-sub-hero-orbit pd-sub-hero-orbit-two"></div>
+                    <div class="pd-sub-hero-plus pd-sub-hero-plus-one"><i class="bi bi-plus-lg"></i></div>
+                    <div class="pd-sub-hero-plus pd-sub-hero-plus-two"><i class="bi bi-plus-lg"></i></div>
+                    <!--- Medical Card --->
+                    <div class="pd-sub-hero-card">
+                        <div class="pd-sub-hero-card-icon"><i class="bi bi-heart-pulse-fill"></i></div>
+                        <div class="pd-sub-hero-card-content">
+                            <span>YOUR HEALTH</span>
+                            <strong>Our Priority</strong>
+                        </div>
+                        <div class="pd-sub-hero-card-check"><i class="bi bi-check-lg"></i></div>
+                    </div>
+                    <!--- Capsule --->
+                    <div class="pd-sub-hero-capsule pd-sub-hero-capsule-one"><i class="bi bi-capsule"></i></div>
+                    <div class="pd-sub-hero-capsule pd-sub-hero-capsule-two"><i class="bi bi-capsule"></i></div>
+                    <!--- Small Badge --->
+                    <div class="pd-sub-hero-badge">
+                        <i class="bi bi-shield-check"></i>
+                        <div>
+                            <strong>Trusted</strong>
+                            <span>Healthcare</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--- Inner Hero Section End --->
+
+    <!--- Upload Prescription Section Start --->
+    <section class="pd-pre-upload">
+        <div class="container">
+            <div class="pd-pre-upload-heading">
+                <div class="pd-pre-upload-heading-left">
+                    <span class="pd-pre-upload-kicker"><i class="bi bi-shield-check"></i> Secure Prescription
+                        Service</span>
+                    <h2>Upload Your Prescription</h2>
+                    <p>Simply upload your prescription and let our pharmacists take care of the rest.</p>
+                </div>
+                <div class="pd-pre-upload-heading-badge">
+                    <i class="bi bi-lock-fill"></i>
+                    <span><strong>100% Secure</strong><small>Your information is protected</small></span>
+                </div>
+            </div>
+            <div class="pd-pre-upload-wrapper">
+                <div class="pd-pre-upload-card">
+                    <div class="pd-pre-upload-card-top">
+                        <div>
+                            <span class="pd-pre-upload-step">STEP 01</span>
+                            <h3>Upload Prescription</h3>
+                            <p>Upload a clear image or PDF of your valid prescription.</p>
+                        </div>
+                        <div class="pd-pre-upload-card-icon"><i class="bi bi-file-earmark-medical"></i></div>
+                    </div>
+                    <div class="pd-pre-upload-dropzone" id="pdPreUploadDropzone">
+                        <div class="pd-pre-upload-dropzone-bg"></div>
+                        <div class="pd-pre-upload-upload-icon">
+                            <i class="bi bi-cloud-arrow-up"></i>
+                            <span></span>
+                        </div>
+                        <h4>Drag & Drop Your Prescription</h4>
+                        <p>or click the button below to browse your device</p>
+                        <label for="pdPreUploadFile" class="pd-pre-upload-browse">
+                            <i class="bi bi-folder2-open"></i>
+                            <span>Browse Prescription</span>
+                        </label>
+                        <input type="file" id="pdPreUploadFile" accept=".jpg,.jpeg,.png,.pdf" hidden>
+                        <div class="pd-pre-upload-format">
+                            <span><i class="bi bi-filetype-pdf"></i> PDF</span>
+                            <span><i class="bi bi-filetype-jpg"></i> JPG</span>
+                            <span><i class="bi bi-filetype-png"></i> PNG</span>
+                            <span>Max 10MB</span>
+                        </div>
+                    </div>
+                    <div class="pd-pre-upload-file" id="pdPreUploadFileBox">
+                        <div class="pd-pre-upload-file-icon"><i class="bi bi-file-earmark-medical"></i></div>
+                        <div class="pd-pre-upload-file-info">
+                            <strong id="pdPreUploadFileName">Prescription.pdf</strong>
+                            <small id="pdPreUploadFileSize">0 KB</small>
+                        </div>
+                        <button type="button" class="pd-pre-upload-file-remove" id="pdPreUploadRemove"
+                            aria-label="Remove prescription"><i class="bi bi-trash3"></i></button>
+                    </div>
+                </div>
+                <div class="pd-pre-upload-side">
+                    <div class="pd-pre-upload-info-card">
+                        <div class="pd-pre-upload-info-icon"><i class="bi bi-person-vcard"></i></div>
+                        <div>
+                            <span>STEP 02</span>
+                            <h3>Tell Us What You Need</h3>
+                            <p>Add a short note for our pharmacist. You can mention medicine preferences or any
+                                important instructions.</p>
+                        </div>
+                    </div>
+                    <div class="pd-pre-upload-form">
+                        <div class="pd-pre-upload-field">
+                            <label for="pdPreUploadNotes">Prescription Notes <span>Optional</span></label>
+                            <textarea id="pdPreUploadNotes"
+                                placeholder="Example: Please check availability and suggest an equivalent if needed..."></textarea>
+                        </div>
+                        <div class="pd-pre-upload-field">
+                            <label for="pdPreUploadDelivery">Preferred Delivery</label>
+                            <div class="pd-pre-upload-select-wrap">
+                                <select id="pdPreUploadDelivery">
+                                    <option value="">Select delivery preference</option>
+                                    <option value="standard">Standard Delivery</option>
+                                    <option value="express">Express Delivery</option>
+                                </select>
+                                <i class="bi bi-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="pd-pre-upload-trust">
+                            <div class="pd-pre-upload-trust-item"><i class="bi bi-shield-lock"></i><span>Private &
+                                    Secure</span></div>
+                            <div class="pd-pre-upload-trust-item"><i class="bi bi-person-check"></i><span>Pharmacist
+                                    Verified</span></div>
+                        </div>
+                        <button type="button" class="pd-pre-upload-submit" id="pdPreUploadSubmit">
+                            <span>Submit Prescription</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="pd-pre-upload-success" id="pdPreUploadSuccess">
+                <div class="pd-pre-upload-success-icon"><i class="bi bi-check-lg"></i></div>
+                <div>
+                    <strong>Prescription Submitted Successfully!</strong>
+                    <p>Our pharmacist will review your prescription and contact you shortly.</p>
+                </div>
+                <button type="button" id="pdPreUploadSuccessClose"><i class="bi bi-x-lg"></i></button>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!--- Upload Prescription Section End --->
+
+    <!--- How Prescription Ordering Works Section Start --->
+    <section class="pd-pre-how">
+        <div class="container">
+            <div class="pd-pre-how-heading">
+                <span class="pd-pre-how-kicker"><i class="bi bi-list-check"></i> Simple Prescription Journey</span>
+                <h2>How Prescription Ordering Works</h2>
+                <p>From uploading your prescription to receiving your medicines, we make every step simple and
+                    convenient.</p>
+            </div>
+            <div class="pd-pre-how-wrapper">
+                <div class="pd-pre-how-line"></div>
+                <!--- Step 01 --->
+                <div class="pd-pre-how-card pd-pre-how-card-active">
+                    <div class="pd-pre-how-number">01</div>
+                    <div class="pd-pre-how-icon"><i class="bi bi-cloud-arrow-up"></i></div>
+                    <div class="pd-pre-how-content">
+                        <span>STEP 01</span>
+                        <h3>Upload Prescription</h3>
+                        <p>Upload a clear photo or PDF of your valid prescription securely.</p>
+                    </div>
+                    <div class="pd-pre-how-arrow"><i class="bi bi-arrow-right"></i></div>
+                </div>
+                <!--- Step 02 --->
+                <div class="pd-pre-how-card">
+                    <div class="pd-pre-how-number">02</div>
+                    <div class="pd-pre-how-icon"><i class="bi bi-person-check"></i></div>
+                    <div class="pd-pre-how-content">
+                        <span>STEP 02</span>
+                        <h3>Pharmacist Reviews</h3>
+                        <p>Our pharmacist carefully checks your prescription and medicine requirements.</p>
+                    </div>
+                    <div class="pd-pre-how-arrow"><i class="bi bi-arrow-right"></i></div>
+                </div>
+                <!--- Step 03 --->
+                <div class="pd-pre-how-card">
+                    <div class="pd-pre-how-number">03</div>
+                    <div class="pd-pre-how-icon"><i class="bi bi-bag-heart"></i></div>
+                    <div class="pd-pre-how-content">
+                        <span>STEP 03</span>
+                        <h3>Confirm Your Order</h3>
+                        <p>Review the recommended medicines, choose your delivery preference and confirm.</p>
+                    </div>
+                    <div class="pd-pre-how-arrow"><i class="bi bi-arrow-right"></i></div>
+                </div>
+                <!--- Step 04 --->
+                <div class="pd-pre-how-card">
+                    <div class="pd-pre-how-number">04</div>
+                    <div class="pd-pre-how-icon"><i class="bi bi-box-seam"></i></div>
+                    <div class="pd-pre-how-content">
+                        <span>STEP 04</span>
+                        <h3>Delivered to Your Door</h3>
+                        <p>Your medicines are carefully packed and delivered conveniently to your doorstep.</p>
+                    </div>
+                    <div class="pd-pre-how-arrow"><i class="bi bi-check-lg"></i></div>
+                </div>
+            </div>
+            <div class="pd-pre-how-bottom">
+                <div class="pd-pre-how-trust">
+                    <i class="bi bi-shield-lock-fill"></i>
+                    <div>
+                        <strong>Your prescription stays private</strong>
+                        <span>Secure handling from upload to delivery</span>
+                    </div>
+                </div>
+                <a href="#pdPreUploadDropzone" class="pd-pre-how-btn">
+                    <span>Start Your Prescription Order</span>
+                    <i class="bi bi-arrow-up-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!--- How Prescription Ordering Works Section End --->
+
+    <!--- Prescription Upload Guidelines Section Start --->
+    <section class="pd-pre-guidelines">
+        <div class="container">
+            <div class="pd-pre-guidelines-heading">
+                <span class="pd-pre-guidelines-kicker"><i class="bi bi-info-circle"></i> Before You Upload</span>
+                <h2>Prescription Upload Guidelines</h2>
+                <p>A few simple tips help our pharmacists read your prescription clearly and process your order faster.
+                </p>
+            </div>
+            <div class="pd-pre-guidelines-wrapper">
+                <!--- Guidelines Content --->
+                <div class="pd-pre-guidelines-content">
+                    <div class="pd-pre-guidelines-item">
+                        <div class="pd-pre-guidelines-icon"><i class="bi bi-check2"></i></div>
+                        <div>
+                            <h3>Use a Clear Prescription</h3>
+                            <p>Make sure the complete prescription is visible, sharp and easy to read.</p>
+                        </div>
+                    </div>
+                    <div class="pd-pre-guidelines-item">
+                        <div class="pd-pre-guidelines-icon"><i class="bi bi-person-vcard"></i></div>
+                        <div>
+                            <h3>Patient Details Should Be Visible</h3>
+                            <p>Ensure the patient's name and important prescription details can be clearly seen.</p>
+                        </div>
+                    </div>
+                    <div class="pd-pre-guidelines-item">
+                        <div class="pd-pre-guidelines-icon"><i class="bi bi-file-earmark-medical"></i></div>
+                        <div>
+                            <h3>Accepted File Formats</h3>
+                            <p>Upload your prescription as JPG, PNG or PDF with a maximum size of 10MB.</p>
+                        </div>
+                    </div>
+                    <div class="pd-pre-guidelines-item">
+                        <div class="pd-pre-guidelines-icon"><i class="bi bi-calendar-check"></i></div>
+                        <div>
+                            <h3>Use a Valid Prescription</h3>
+                            <p>Upload a current and valid prescription issued by a qualified healthcare professional.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--- Upload Ready Card --->
+                <div class="pd-pre-guidelines-card">
+                    <div class="pd-pre-guidelines-card-circle pd-pre-guidelines-card-circle-one"></div>
+                    <div class="pd-pre-guidelines-card-circle pd-pre-guidelines-card-circle-two"></div>
+                    <div class="pd-pre-guidelines-card-top">
+                        <span><i class="bi bi-shield-check"></i> Secure Upload</span>
+                        <i class="bi bi-lock-fill"></i>
+                    </div>
+                    <div class="pd-pre-guidelines-card-icon">
+                        <i class="bi bi-file-earmark-check"></i>
+                        <div class="pd-pre-guidelines-card-check"><i class="bi bi-check-lg"></i></div>
+                    </div>
+                    <h3>Ready to Upload?</h3>
+                    <p>Keep your prescription nearby and upload it securely in just a few clicks.</p>
+                    <div class="pd-pre-guidelines-card-list">
+                        <span><i class="bi bi-check-circle-fill"></i> Clear & readable</span>
+                        <span><i class="bi bi-check-circle-fill"></i> JPG, PNG or PDF</span>
+                        <span><i class="bi bi-check-circle-fill"></i> Maximum 10MB</span>
+                    </div>
+                    <a href="#pdPreUploadDropzone" class="pd-pre-guidelines-btn"><span>Upload Prescription</span><i
+                            class="bi bi-arrow-up-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--- Prescription Upload Guidelines Section End --->
+
+    <!--- CTA Section Start --->
+    <section class="pd-cta-section">
+        <div class="container">
+            <div class="pd-cta-card">
+                <div class="pd-cta-pattern"></div>
+                <div class="pd-cta-orbit pd-cta-orbit-one"></div>
+                <div class="pd-cta-orbit pd-cta-orbit-two"></div>
+                <!--- CTA Content --->
+                <div class="pd-cta-content">
+                    <div class="pd-cta-badge"><i class="bi bi-heart-pulse-fill"></i><span>Your Health, Delivered</span>
+                    </div>
+                    <h2 class="pd-cta-title">Upload Your <br><span>Prescription.</span></h2>
+                    <p class="pd-cta-des">Get trusted medicines and healthcare essentials delivered to your doorstep
+                        with a simple, secure and convenient experience.</p>
+                    <div class="pd-cta-actions">
+                        <a href="about.html" class="pd-cta-primary-btn"><span>Learn More</span><i
+                                class="bi bi-arrow-up-right"></i></a>
+                        <a href="contact.html" class="pd-cta-secondary-btn"><i
+                                class="bi bi-file-earmark-medical"></i><span>Talk to Us</span></a>
+                    </div>
+                </div>
+                <!--- CTA Visual --->
+                <div class="pd-cta-visual">
+                    <div class="pd-cta-visual-glow"></div>
+                    <div class="pd-cta-delivery-circle">
+                        <div class="pd-cta-delivery-icon"><i class="bi bi-truck"></i></div>
+                        <div class="pd-cta-delivery-line"></div>
+                        <div class="pd-cta-delivery-box"><i class="bi bi-capsule"></i></div>
+                    </div>
+                    <div class="pd-cta-floating-card pd-cta-floating-card-one">
+                        <div class="pd-cta-floating-icon"><i class="bi bi-shield-check"></i></div>
+                        <div><small>Safe & Trusted</small><strong>Healthcare</strong></div>
+                    </div>
+                    <div class="pd-cta-floating-card pd-cta-floating-card-two">
+                        <div class="pd-cta-floating-icon"><i class="bi bi-clock"></i></div>
+                        <div><small>Fast Delivery</small><strong>At Your Door</strong></div>
+                    </div>
+                    <div class="pd-cta-floating-plus pd-cta-floating-plus-one">+</div>
+                    <div class="pd-cta-floating-plus pd-cta-floating-plus-two">+</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--- CTA Section End --->
+
+    <!--- Footer --->
+    <div id="pd-footer-component"></div>
+
+    <!--- Js Files --->
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="assets/js/components.js"></script>
+    <script src="assets/js/loader.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/footer.js"></script>
+
+    <!-- Page JS -->
+    <script src="assets/js/sub-hero.js"></script>
+    <script src="assets/js/prescription.js"></script>
+</body>
+
+</html>

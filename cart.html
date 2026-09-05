@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Pharmacy Delivery | Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/webp" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/android-chrome-192x192.png">
+    <link rel="icon" type="image/webp" sizes="512x512" href="assets/images/android-chrome-512x512.png">
+    <link rel="manifest" href="assets/images/site.webmanifest">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/loader.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/cart.css">
+</head>
+
+<body>
+
+    <!--- NavBar --->
+    <div id="pd-navbar-component"></div>
+
+    <!--- Cart Hero Start --->
+    <section class="pd-cart-hero">
+        <div class="pd-cart-hero-orbit pd-cart-hero-orbit-one"></div>
+        <div class="pd-cart-hero-orbit pd-cart-hero-orbit-two"></div>
+        <div class="pd-cart-hero-container container">
+            <div class="pd-cart-hero-content">
+                <div class="pd-cart-breadcrumb">
+                    <a href="index.html">Home</a>
+                    <i class="bi bi-chevron-right"></i>
+                    <span>Shopping Cart</span>
+                </div>
+                <div class="pd-cart-hero-label">
+                    <span><i class="bi bi-bag-heart"></i></span>
+                    <span>Your Healthcare Basket</span>
+                </div>
+                <h1 class="pd-cart-hero-title">Your <span>Cart</span></h1>
+                <p class="pd-cart-hero-description">Review your medicines, update quantities and continue to a secure
+                    checkout whenever you're ready.</p>
+            </div>
+            <div class="pd-cart-hero-visual">
+                <div class="pd-cart-hero-visual-ring pd-cart-hero-visual-ring-one"></div>
+                <div class="pd-cart-hero-visual-ring pd-cart-hero-visual-ring-two"></div>
+                <div class="pd-cart-hero-bag">
+                    <i class="bi bi-bag-heart"></i>
+                    <span id="pdCartHeroCount">0</span>
+                </div>
+                <div class="pd-cart-hero-float pd-cart-hero-float-one"><i class="bi bi-capsule"></i></div>
+                <div class="pd-cart-hero-float pd-cart-hero-float-two"><i class="bi bi-shield-check"></i></div>
+            </div>
+        </div>
+    </section>
+    <!--- Cart Hero End --->
+
+    <!--- Cart Main Start --->
+    <section class="pd-cart-main">
+        <div class="container">
+            <div class="pd-cart-layout">
+                <div class="pd-cart-products">
+                    <div class="pd-cart-products-header">
+                        <div>
+                            <span class="pd-cart-products-eyebrow"><i class="bi bi-prescription2"></i> ORDER
+                                ITEMS</span>
+                            <h2 class="pd-cart-products-title">Medicines in your cart</h2>
+                        </div>
+                        <button type="button" class="pd-cart-clear-btn" id="pdCartClearBtn"><i
+                                class="bi bi-trash3"></i><span>Clear Cart</span></button>
+                    </div>
+                    <div class="pd-cart-items" id="pdCartItems"></div>
+                    <div class="pd-cart-empty" id="pdCartEmpty">
+                        <div class="pd-cart-empty-icon"><i class="bi bi-bag-x"></i></div>
+                        <h3>Your cart is waiting</h3>
+                        <p>You haven't added any medicines yet. Explore our pharmacy collection and find what you need.
+                        </p>
+                        <a href="medicines.html" class="pd-cart-empty-btn"><i class="bi bi-capsule"></i><span>Browse
+                                Medicines</span></a>
+                    </div>
+                    <div class="pd-cart-continue">
+                        <a href="medicines.html"><i class="bi bi-arrow-left"></i><span>Continue Shopping</span></a>
+                        <div class="pd-cart-safe-note"><i class="bi bi-shield-check"></i><span>Safe & secure medicine
+                                delivery</span></div>
+                    </div>
+                </div>
+                <!--- Cart Summary Start --->
+                <aside class="pd-cart-summary">
+                    <div class="pd-cart-summary-card">
+                        <div class="pd-cart-summary-heading">
+                            <div>
+                                <span class="pd-cart-summary-label">ORDER SUMMARY</span>
+                                <h2>Checkout details</h2>
+                            </div>
+                            <div class="pd-cart-summary-icon"><i class="bi bi-receipt"></i></div>
+                        </div>
+                        <div class="pd-cart-summary-count">
+                            <span>Items in cart</span>
+                            <strong id="pdCartSummaryCount">0</strong>
+                        </div>
+                        <div class="pd-cart-summary-divider"></div>
+                        <div class="pd-cart-summary-row">
+                            <span>Subtotal</span>
+                            <strong id="pdCartSubtotal">₹0.00</strong>
+                        </div>
+                        <div class="pd-cart-summary-row">
+                            <span>Delivery</span>
+                            <strong id="pdCartDelivery">₹0.00</strong>
+                        </div>
+                        <div class="pd-cart-summary-row pd-cart-summary-discount">
+                            <span>Discount</span>
+                            <strong id="pdCartDiscount">- ₹0.00</strong>
+                        </div>
+                        <div class="pd-cart-summary-divider"></div>
+                        <div class="pd-cart-summary-total">
+                            <span>Total</span>
+                            <strong id="pdCartTotal">₹0.00</strong>
+                        </div>
+                        <button type="button" class="pd-cart-checkout-btn" id="pdCartCheckoutBtn"><span>Proceed to
+                                Checkout</span><i class="bi bi-arrow-right"></i></button>
+                        <div class="pd-cart-secure">
+                            <i class="bi bi-lock-fill"></i>
+                            <span>Secure checkout & protected payment</span>
+                        </div>
+                    </div>
+                    <div class="pd-cart-delivery-card">
+                        <div class="pd-cart-delivery-icon"><i class="bi bi-truck"></i></div>
+                        <div>
+                            <strong>Fast delivery</strong>
+                            <span>Healthcare delivered to your doorstep.</span>
+                        </div>
+                        <i class="bi bi-check-circle-fill"></i>
+                    </div>
+                    <div class="pd-cart-pharmacist-card">
+                        <div class="pd-cart-pharmacist-icon"><i class="bi bi-person-heart"></i></div>
+                        <div>
+                            <strong>Need help with your order?</strong>
+                            <span>Our pharmacy team is here to help.</span>
+                        </div>
+                        <a href="contact.html" aria-label="Contact pharmacist"><i class="bi bi-arrow-up-right"></i></a>
+                    </div>
+                </aside>
+                <!--- Cart Summary End --->
+            </div>
+        </div>
+    </section>
+    <!--- Cart Main End --->
+    <!--- Cart Trust Start --->
+    <section class="pd-cart-trust">
+        <div class="container">
+            <div class="pd-cart-trust-grid">
+                <div class="pd-cart-trust-item">
+                    <div class="pd-cart-trust-icon"><i class="bi bi-shield-check"></i></div>
+                    <div><strong>Trusted Healthcare</strong><span>Quality-focused pharmacy service</span></div>
+                </div>
+                <div class="pd-cart-trust-item">
+                    <div class="pd-cart-trust-icon"><i class="bi bi-truck"></i></div>
+                    <div><strong>Quick Delivery</strong><span>Convenient doorstep delivery</span></div>
+                </div>
+                <div class="pd-cart-trust-item">
+                    <div class="pd-cart-trust-icon"><i class="bi bi-headset"></i></div>
+                    <div><strong>Pharmacist Support</strong><span>Help when you need it</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--- Cart Trust End --->
+    <!--- Footer --->
+    <div id="pd-footer-component"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/components.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/footer.js"></script>
+    <script src="assets/js/loader.js"></script>
+    <script src="assets/js/cart.js"></script>
+</body>
+
+</html>

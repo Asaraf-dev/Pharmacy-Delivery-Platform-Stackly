@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Delivery | My Prescriptions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/webp" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+    <link rel="manifest" href="assets/images/site.webmanifest">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="assets/css/client-prescription.css">
+</head>
+<body>
+    <!--- Client Dashboard Start --->
+    <div class="pd-dsh-dashboard">
+        <!--- Sidebar Overlay --->
+        <div class="pd-dsh-sidebar-overlay" id="pdDshSidebarOverlay"></div>
+        <!--- Sidebar Start --->
+        <aside class="pd-dsh-sidebar" id="pdDshSidebar">
+            <!--- Sidebar Logo --->
+            <div class="pd-dsh-sidebar-logo">
+                <a href="index.html">
+                    <img src="assets/images/brand-logo.webp" alt="Pharmacy Delivery">
+                </a>
+            </div>
+            <!--- Sidebar User --->
+            <div class="pd-dsh-sidebar-user">
+                <div class="pd-dsh-sidebar-user-image">
+                    <img src="assets/images/profile-1.webp" alt="Profile">
+                </div>
+                <div>
+                    <small>Signed in as</small>
+                    <strong id="pdDshSidebarEmail">client@example.com</strong>
+                </div>
+            </div>
+            <!--- Sidebar Navigation --->
+            <nav class="pd-dsh-sidebar-nav">
+                <a href="client-dashboard.html" class="pd-dsh-sidebar-link" data-page="client-dashboard.html">
+                    <span class="pd-dsh-sidebar-link-icon"><i class="bi bi-grid-1x2"></i></span>
+                    <span>Dashboard</span>
+                    <i class="bi bi-chevron-right"></i>
+                </a>
+                <a href="client-orders.html" class="pd-dsh-sidebar-link" data-page="client-orders.html">
+                    <span class="pd-dsh-sidebar-link-icon"><i class="bi bi-bag-check"></i></span>
+                    <span>My Orders</span>
+                    <i class="bi bi-chevron-right"></i>
+                </a>
+                <a href="client-prescription.html" class="pd-dsh-sidebar-link active" data-page="client-prescription.html">
+                    <span class="pd-dsh-sidebar-link-icon"><i class="bi bi-file-earmark-medical"></i></span>
+                    <span>Prescriptions</span>
+                    <i class="bi bi-chevron-right"></i>
+                </a>
+                <a href="client-profile.html" class="pd-dsh-sidebar-link" data-page="client-profile.html">
+                    <span class="pd-dsh-sidebar-link-icon"><i class="bi bi-person"></i></span>
+                    <span>Profile</span>
+                    <i class="bi bi-chevron-right"></i>
+                </a>
+                <button type="button" class="pd-dsh-sidebar-link pd-dsh-logout" id="pdDshLogout">
+                    <span class="pd-dsh-sidebar-link-icon"><i class="bi bi-box-arrow-right"></i></span>
+                    <span>Logout</span>
+                    <i class="bi bi-chevron-right"></i>
+                </button>
+            </nav>
+            <!--- Sidebar Bottom --->
+            <div class="pd-dsh-sidebar-bottom">
+                <div class="pd-dsh-sidebar-support">
+                    <i class="bi bi-headset"></i>
+                    <div>
+                        <small>Need Assistance?</small>
+                        <strong>Contact Support</strong>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!--- Sidebar End --->
+        <!--- Dashboard Main Start --->
+        <main class="pd-dsh-main">
+            <!--- Topbar Start --->
+            <header class="pd-dsh-topbar">
+                <div class="pd-dsh-topbar-left">
+                    <button type="button" class="pd-dsh-menu-toggle" id="pdDshMenuToggle" aria-label="Open menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="pd-dsh-page-title">
+                        <span>Pharmacy Delivery</span>
+                        <h1>My Prescriptions</h1>
+                    </div>
+                </div>
+                <div class="pd-dsh-topbar-right">
+                    <div class="pd-dsh-topbar-user">
+                        <div class="pd-dsh-topbar-user-text">
+                            <small>Signed in as</small>
+                            <strong id="pdDshTopbarEmail">client@example.com</strong>
+                        </div>
+                        <div class="pd-dsh-topbar-avatar">
+                           <img src="assets/images/profile-1.webp" alt="Profile">
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!--- Topbar End --->
+            <!--- Prescription Content Start --->
+            <div class="pd-dsh-content">
+                <div class="container-fluid">
+                    <!--- Page Header --->
+                    <section class="pd-prs-header">
+                        <div>
+                            <span class="pd-prs-kicker">
+                                <i class="bi bi-file-earmark-medical"></i>
+                                Prescription Center
+                            </span>
+                            <h2>My Prescriptions</h2>
+                            <p>View, manage and track your uploaded prescriptions securely.</p>
+                        </div>
+                        <a href="prescription.html" class="pd-prs-upload-btn">
+                            <i class="bi bi-cloud-arrow-up"></i>
+                            Upload Prescription
+                        </a>
+                    </section>
+                    <!--- Prescription Statistics --->
+                    <section class="pd-prs-stats">
+                        <div class="pd-prs-stat-card">
+                            <div class="pd-prs-stat-icon">
+                                <i class="bi bi-file-earmark-medical"></i>
+                            </div>
+                            <div>
+                                <span>Total Prescriptions</span>
+                                <strong>04</strong>
+                                <small>All uploaded prescriptions</small>
+                            </div>
+                        </div>
+                        <div class="pd-prs-stat-card">
+                            <div class="pd-prs-stat-icon">
+                                <i class="bi bi-check-circle"></i>
+                            </div>
+                            <div>
+                                <span>Verified</span>
+                                <strong>02</strong>
+                                <small>Reviewed by pharmacist</small>
+                            </div>
+                        </div>
+                        <div class="pd-prs-stat-card">
+                            <div class="pd-prs-stat-icon">
+                                <i class="bi bi-clock-history"></i>
+                            </div>
+                            <div>
+                                <span>Under Review</span>
+                                <strong>01</strong>
+                                <small>Awaiting pharmacist review</small>
+                            </div>
+                        </div>
+                        <div class="pd-prs-stat-card">
+                            <div class="pd-prs-stat-icon">
+                                <i class="bi bi-cart-check"></i>
+                            </div>
+                            <div>
+                                <span>Available</span>
+                                <strong>01</strong>
+                                <small>Ready for ordering</small>
+                            </div>
+                        </div>
+                    </section>
+                    <!--- Prescription Toolbar --->
+                    <section class="pd-prs-toolbar">
+                        <div class="pd-prs-search">
+                            <i class="bi bi-search"></i>
+                            <input type="search" id="pdPrsSearch" placeholder="Search prescription...">
+                        </div>
+                        <div class="pd-prs-filter">
+                            <i class="bi bi-funnel"></i>
+                            <select id="pdPrsFilter">
+                                <option value="all">All Prescriptions</option>
+                                <option value="verified">Verified</option>
+                                <option value="review">Under Review</option>
+                                <option value="active">Active</option>
+                            </select>
+                        </div>
+                    </section>
+                    <!--- Prescription List --->
+                    <section class="pd-prs-list">
+                        <!--- Prescription Item --->
+                        <article class="pd-prs-card" data-status="verified">
+                            <div class="pd-prs-card-left">
+                                <div class="pd-prs-card-icon">
+                                    <i class="bi bi-file-earmark-medical"></i>
+                                </div>
+                                <div class="pd-prs-card-info">
+                                    <div class="pd-prs-card-title">
+                                        <h3>Prescription #RX2084</h3>
+                                        <span class="pd-prs-status pd-prs-status-verified">Verified</span>
+                                    </div>
+                                    <p>Uploaded on 01 Sep 2026</p>
+                                    <small>
+                                        <i class="bi bi-shield-check"></i>
+                                        Pharmacist review completed
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="pd-prs-card-actions">
+                                <button type="button" class="pd-prs-view-btn">
+                                    <i class="bi bi-eye"></i>
+                                    View
+                                </button>
+                                <button type="button" class="pd-prs-more-btn" aria-label="More options">
+                                    <i class="bi bi-three-dots"></i>
+                                </button>
+                            </div>
+                        </article>
+                        <!--- Prescription Item --->
+                        <article class="pd-prs-card" data-status="active">
+                            <div class="pd-prs-card-left">
+                                <div class="pd-prs-card-icon">
+                                    <i class="bi bi-file-earmark-medical"></i>
+                                </div>
+                                <div class="pd-prs-card-info">
+                                    <div class="pd-prs-card-title">
+                                        <h3>Prescription #RX2071</h3>
+                                        <span class="pd-prs-status pd-prs-status-active">Active</span>
+                                    </div>
+                                    <p>Uploaded on 24 Aug 2026</p>
+                                    <small>
+                                        <i class="bi bi-check-circle"></i>
+                                        Available for ordering
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="pd-prs-card-actions">
+                                <button type="button" class="pd-prs-view-btn">
+                                    <i class="bi bi-eye"></i>
+                                    View
+                                </button>
+                                <button type="button" class="pd-prs-more-btn" aria-label="More options">
+                                    <i class="bi bi-three-dots"></i>
+                                </button>
+                            </div>
+                        </article>
+                        <!--- Prescription Item --->
+                        <article class="pd-prs-card" data-status="review">
+                            <div class="pd-prs-card-left">
+                                <div class="pd-prs-card-icon">
+                                    <i class="bi bi-file-earmark-medical"></i>
+                                </div>
+                                <div class="pd-prs-card-info">
+                                    <div class="pd-prs-card-title">
+                                        <h3>Prescription #RX2058</h3>
+                                        <span class="pd-prs-status pd-prs-status-review">Under Review</span>
+                                    </div>
+                                    <p>Uploaded on 18 Aug 2026</p>
+                                    <small>
+                                        <i class="bi bi-clock"></i>
+                                        Waiting for pharmacist verification
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="pd-prs-card-actions">
+                                <button type="button" class="pd-prs-view-btn">
+                                    <i class="bi bi-eye"></i>
+                                    View
+                                </button>
+                                <button type="button" class="pd-prs-more-btn" aria-label="More options">
+                                    <i class="bi bi-three-dots"></i>
+                                </button>
+                            </div>
+                        </article>
+                        <!--- Prescription Item --->
+                        <article class="pd-prs-card" data-status="verified">
+                            <div class="pd-prs-card-left">
+                                <div class="pd-prs-card-icon">
+                                    <i class="bi bi-file-earmark-medical"></i>
+                                </div>
+                                <div class="pd-prs-card-info">
+                                    <div class="pd-prs-card-title">
+                                        <h3>Prescription #RX2039</h3>
+                                        <span class="pd-prs-status pd-prs-status-verified">Verified</span>
+                                    </div>
+                                    <p>Uploaded on 09 Aug 2026</p>
+                                    <small>
+                                        <i class="bi bi-shield-check"></i>
+                                        Pharmacist review completed
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="pd-prs-card-actions">
+                                <button type="button" class="pd-prs-view-btn">
+                                    <i class="bi bi-eye"></i>
+                                    View
+                                </button>
+                                <button type="button" class="pd-prs-more-btn" aria-label="More options">
+                                    <i class="bi bi-three-dots"></i>
+                                </button>
+                            </div>
+                        </article>
+                    </section>
+                    <!--- Prescription Information --->
+                    <section class="pd-prs-info-box">
+                        <div class="pd-prs-info-icon">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <div>
+                            <h3>Your prescriptions are secure</h3>
+                            <p>Your prescription information is handled securely and reviewed by our pharmacy team before prescription-related medicines are processed.</p>
+                        </div>
+                    </section>
+                    <!--- Support --->
+                    <section class="pd-prs-support">
+                        <div class="pd-prs-support-icon">
+                            <i class="bi bi-headset"></i>
+                        </div>
+                        <div>
+                            <span>Need Assistance?</span>
+                            <strong>Talk to our healthcare support team</strong>
+                        </div>
+                        <a href="contact.html">
+                            Contact Support
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </section>
+                </div>
+            </div>
+            <!--- Prescription Content End --->
+        </main>
+        <!--- Dashboard Main End --->
+    </div>
+    <!--- Client Dashboard End --- -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/client-prescription.js"></script>
+</body>
+</html>

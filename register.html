@@ -1,0 +1,203 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pharmacy Delivery | Register</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Main favicon -->
+    <link rel="icon" href="favicon.ico" />
+    <!-- webp favicons -->
+    <link rel="icon" type="image/webp" sizes="16x16" href="assets/images/favicon-16x16.png" />
+    <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/favicon-32x32.png" />
+    <!-- Apple -->
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+    <!-- Android -->
+    <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/android-chrome-192x192.png" />
+    <link rel="icon" type="image/webp" sizes="512x512" href="assets/images/android-chrome-512x512.png" />
+    <!-- Manifest -->
+    <link rel="manifest" href="assets/images/site.webmanifest" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!--- Bootstrap Icon --->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/auth.css" />
+</head>
+
+<body>
+
+    <!--- Register Page Start --->
+    <section class="pd-log-login">
+        <div class="pd-log-login-bg">
+            <span class="pd-log-login-circle pd-log-login-circle-one"></span>
+            <span class="pd-log-login-circle pd-log-login-circle-two"></span>
+            <span class="pd-log-login-circle pd-log-login-circle-three"></span>
+        </div>
+        <div class="container">
+            <div class="pd-log-login-wrapper">
+
+                <!--- Register Visual --->
+                <div class="pd-log-login-visual">
+                    <a href="index.html" class="pd-log-login-brand">
+                        <img src="assets/images/brand-logo.webp" alt="Pharmacy Delivery Platform">
+                    </a>
+                    <div class="pd-log-login-visual-content">
+                        <span class="pd-log-login-kicker"><i class="bi bi-heart-pulse"></i> Join Our Healthcare
+                            Platform</span>
+                        <h1>Your Healthcare<br><span>Starts Here.</span></h1>
+                        <p>Create your Pharmacy Delivery account and enjoy a simpler way to manage medicines,
+                            prescriptions and healthcare needs.</p>
+                        <div class="pd-log-login-visual-features">
+                            <div class="pd-log-login-feature">
+                                <div class="pd-log-login-feature-icon"><i class="bi bi-person-check"></i></div>
+                                <div><strong>Easy Account Setup</strong><span>Create your account in just a few simple
+                                        steps.</span></div>
+                            </div>
+                            <div class="pd-log-login-feature">
+                                <div class="pd-log-login-feature-icon"><i class="bi bi-shield-check"></i></div>
+                                <div><strong>Secure & Private</strong><span>Your personal information stays
+                                        protected.</span></div>
+                            </div>
+                            <div class="pd-log-login-feature">
+                                <div class="pd-log-login-feature-icon"><i class="bi bi-truck"></i></div>
+                                <div><strong>Fast Delivery</strong><span>Get your healthcare essentials at your
+                                        doorstep.</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pd-log-login-visual-bottom">
+                        <span><i class="bi bi-check-circle-fill"></i> Trusted Healthcare Service</span>
+                        <span><i class="bi bi-lock-fill"></i> Secure Registration</span>
+                    </div>
+                </div>
+
+                <!--- Register Form --->
+                <div class="pd-log-login-card">
+                    <div class="pd-log-login-card-heading">
+                        <span class="pd-log-login-card-icon"><i class="bi bi-person-plus"></i></span>
+                        <div>
+                            <span>Create Account</span>
+                            <h2>Join Pharmacy Delivery</h2>
+                        </div>
+                    </div>
+                    <p class="pd-log-login-card-description">Choose your account type and enter your details to create
+                        your account.</p>
+
+                    <!--- Account Type --->
+                    <div class="pd-log-login-role">
+                        <label class="pd-log-login-role-option active">
+                            <input type="radio" name="pdRegisterRole" value="client" checked required>
+                            <span class="pd-log-login-role-box">
+                                <i class="bi bi-person"></i>
+                                <strong>Client</strong>
+                                <small>Shop & manage orders</small>
+                            </span>
+                        </label>
+                        <label class="pd-log-login-role-option">
+                            <input type="radio" name="pdRegisterRole" value="admin" required>
+                            <span class="pd-log-login-role-box">
+                                <i class="bi bi-shield-lock"></i>
+                                <strong>Admin</strong>
+                                <small>Manage platform</small>
+                            </span>
+                        </label>
+                    </div>
+
+                    <form id="pdRegisterForm">
+
+                        <!--- Full Name --->
+                        <div class="pd-log-login-field">
+                            <label for="pdRegisterName">Full Name</label>
+                            <div class="pd-log-login-input">
+                                <i class="bi bi-person"></i>
+                                <input type="text" id="pdRegisterName" name="name" placeholder="Enter your full name"
+                                    autocomplete="name" pattern="[A-Za-z ]+" required>
+                            </div>
+                        </div>
+
+                        <!--- Phone Number --->
+                        <div class="pd-log-login-field">
+                            <label for="pdRegisterPhone">Phone Number</label>
+                            <div class="pd-log-login-input">
+                                <i class="bi bi-telephone"></i>
+                                <input type="tel" id="pdRegisterPhone" name="phone"
+                                    placeholder="Enter 10-digit phone number" autocomplete="tel" inputmode="numeric"
+                                    minlength="10" maxlength="10" pattern="[0-9]{10}" required>
+                            </div>
+                        </div>
+
+                        <!--- Email --->
+                        <div class="pd-log-login-field">
+                            <label for="pdRegisterEmail">Email Address</label>
+                            <div class="pd-log-login-input">
+                                <i class="bi bi-envelope"></i>
+                                <input type="email" id="pdRegisterEmail" name="email"
+                                    placeholder="Enter your email address" autocomplete="email" required>
+                            </div>
+                        </div>
+
+                        <!--- Password --->
+                        <div class="pd-log-login-field">
+                            <label for="pdRegisterPassword">Password</label>
+                            <div class="pd-log-login-input">
+                                <i class="bi bi-lock"></i>
+                                <input type="password" id="pdRegisterPassword" name="password"
+                                    placeholder="Create a password" autocomplete="new-password" required>
+                                <button type="button" class="pd-log-login-password-toggle" id="pdRegisterPasswordToggle"
+                                    aria-label="Show password">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+                            </div>
+                            <small class="pd-log-login-error" id="pdRegisterPasswordError"></small>
+                        </div>
+
+                        <!--- Confirm Password --->
+                        <div class="pd-log-login-field">
+                            <label for="pdRegisterConfirmPassword">Confirm Password</label>
+                            <div class="pd-log-login-input">
+                                <i class="bi bi-lock-fill"></i>
+                                <input type="password" id="pdRegisterConfirmPassword" name="confirmPassword"
+                                    placeholder="Confirm your password" autocomplete="new-password" required>
+                                <button type="button" class="pd-log-login-password-toggle"
+                                    id="pdRegisterConfirmPasswordToggle" aria-label="Show password">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!--- Create Account Button --->
+                        <button type="submit" class="pd-log-login-submit" id="pdRegisterSubmit">
+                            <span>Create Account</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </button>
+                    </form>
+
+                    <!--- Sign In --->
+                    <div class="pd-log-login-signup">
+                        <span>Already have an account?</span>
+                        <a href="login.html">Sign In <i class="bi bi-arrow-up-right"></i></a>
+                    </div>
+
+                    <!--- Back Home --->
+                    <a href="index.html" class="pd-log-login-back">
+                        <i class="bi bi-arrow-left"></i>
+                        <span>Back to Home</span>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--- Register Page End --->
+
+    <!--- Js Files --->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="assets/js/auth.js"></script>
+</body>
+
+</html>

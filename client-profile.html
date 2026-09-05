@@ -1,0 +1,297 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pharmacy Delivery | My Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="icon" type="image/webp" sizes="16x16" href="assets/images/favicon-16x16.png" />
+    <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/favicon-32x32.png" />
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+    <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/android-chrome-192x192.png" />
+    <link rel="icon" type="image/webp" sizes="512x512" href="assets/images/android-chrome-512x512.png" />
+    <link rel="manifest" href="assets/images/site.webmanifest" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/dashboard.css" />
+    <link rel="stylesheet" href="assets/css/client-profile.css" />
+</head>
+
+<body>
+    <!--- Dashboard Start --->
+    <div class="pd-dsh-dashboard">
+        <!--- Sidebar Overlay --->
+        <div class="pd-dsh-sidebar-overlay" id="pdDshSidebarOverlay"></div>
+        <!--- Sidebar Start --->
+        <aside class="pd-dsh-sidebar" id="pdDshSidebar">
+            <!--- Sidebar Logo --->
+            <div class="pd-dsh-sidebar-logo">
+                <a href="index.html">
+                    <img src="assets/images/brand-logo.webp" alt="Pharmacy Delivery Platform">
+                </a>
+            </div>
+            <!--- Mobile Sidebar Email --->
+            <div class="pd-dsh-sidebar-user">
+                <div class="pd-dsh-sidebar-user-image">
+                    <img src="assets/images/profile-1.webp" alt="Profile">
+                </div>
+                <div>
+                    <small>Signed in as</small>
+                    <strong id="pdDshSidebarEmail">Loading...</strong>
+                </div>
+            </div>
+            <!--- Sidebar Navigation --->
+            <nav class="pd-dsh-sidebar-nav">
+                <a href="client-dashboard.html" class="pd-dsh-sidebar-link" data-page="client-dashboard.html">
+                    <span class="pd-dsh-sidebar-link-icon"><i class="bi bi-grid-1x2"></i></span>
+                    <span>Dashboard</span>
+                    <i class="bi bi-chevron-right"></i>
+                </a>
+                <a href="client-orders.html" class="pd-dsh-sidebar-link" data-page="client-orders.html">
+                    <span class="pd-dsh-sidebar-link-icon"><i class="bi bi-bag-check"></i></span>
+                    <span>My Orders</span>
+                    <i class="bi bi-chevron-right"></i>
+                </a>
+                <a href="client-prescription.html" class="pd-dsh-sidebar-link" data-page="client-prescription.html">
+                    <span class="pd-dsh-sidebar-link-icon"><i class="bi bi-file-earmark-medical"></i></span>
+                    <span>Prescriptions</span>
+                    <i class="bi bi-chevron-right"></i>
+                </a>
+                <a href="client-profile.html" class="pd-dsh-sidebar-link active" data-page="client-profile.html">
+                    <span class="pd-dsh-sidebar-link-icon"><i class="bi bi-person"></i></span>
+                    <span>Profile</span>
+                    <i class="bi bi-chevron-right"></i>
+                </a>
+                <button type="button" class="pd-dsh-sidebar-link pd-dsh-logout" id="pdDshLogout">
+                    <span class="pd-dsh-sidebar-link-icon"><i class="bi bi-box-arrow-right"></i></span>
+                    <span>Logout</span>
+                    <i class="bi bi-chevron-right"></i>
+                </button>
+            </nav>
+            <!--- Sidebar Bottom --->
+            <div class="pd-dsh-sidebar-bottom">
+                <div class="pd-dsh-sidebar-support">
+                    <i class="bi bi-headset"></i>
+                    <div>
+                        <small>Need help?</small>
+                        <strong>Talk to our team</strong>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!--- Main Area Start --->
+        <div class="pd-dsh-main">
+            <!--- Topbar Start --->
+            <header class="pd-dsh-topbar">
+                <div class="pd-dsh-topbar-left">
+                    <button type="button" class="pd-dsh-menu-toggle" id="pdDshMenuToggle"
+                        aria-label="Open Dashboard Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="pd-dsh-page-title">
+                        <span>Pharmacy Delivery</span>
+                        <h1 id="pdDshDashboardName">My Profile</h1>
+                    </div>
+                </div>
+                <div class="pd-dsh-topbar-right">
+                    <div class="pd-dsh-topbar-user">
+                        <div class="pd-dsh-topbar-user-text">
+                            <small>Signed in as</small>
+                            <strong id="pdDshTopbarEmail">Loading...</strong>
+                        </div>
+                        <div class="pd-dsh-topbar-avatar">
+                            <img src="assets/images/profile-1.webp" alt="Profile">
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!--- Profile Content --->
+            <main class="pd-dsh-content">
+                <div class="container-fluid">
+                    <!--- Profile Page Start --->
+                    <section class="pd-prf-profile">
+                        <!--- Profile Heading --->
+                        <div class="pd-prf-heading">
+                            <div>
+                                <span class="pd-prf-kicker"><i class="bi bi-person"></i> Account Profile</span>
+                                <h2>My Profile</h2>
+                                <p>View your account information and registered details.</p>
+                            </div>
+                            <a href="client-dashboard.html" class="pd-prf-back-btn">
+                                <i class="bi bi-arrow-left"></i>
+                                <span>Back to Dashboard</span>
+                            </a>
+                        </div>
+                        <!--- Profile Main Grid --->
+                        <div class="pd-prf-grid">
+                            <!--- Profile Identity Card --->
+                            <div class="pd-prf-identity-card">
+                                <div class="pd-prf-profile-image">
+                                    <img src="assets/images/profile-1.webp" alt="Profile">
+                                    <span><i class="bi bi-check-lg"></i></span>
+                                </div>
+                                <h3 id="pdPrfName">Client</h3>
+                                <p id="pdPrfEmail">client@example.com</p>
+                                <div class="pd-prf-role">
+                                    <i class="bi bi-person"></i>
+                                    <span id="pdPrfRole">Client Account</span>
+                                </div>
+                                <div class="pd-prf-account-status">
+                                    <i class="bi bi-shield-check"></i>
+                                    <div>
+                                        <strong>Account Active</strong>
+                                        <span>Your account is ready to use.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--- Personal Information Card --->
+                            <div class="pd-prf-details-card">
+                                <div class="pd-prf-card-heading">
+                                    <div>
+                                        <span>Personal Information</span>
+                                        <h3>Account Details</h3>
+                                    </div>
+                                    <span class="pd-prf-card-icon"><i class="bi bi-person-vcard"></i></span>
+                                </div>
+                                <div class="pd-prf-details-list">
+                                    <!--- Full Name --->
+                                    <div class="pd-prf-detail-item">
+                                        <div class="pd-prf-detail-icon">
+                                            <i class="bi bi-person"></i>
+                                        </div>
+                                        <div class="pd-prf-detail-content">
+                                            <span>Full Name</span>
+                                            <strong id="pdPrfFullName">Loading...</strong>
+                                        </div>
+                                    </div>
+                                    <!--- Phone --->
+                                    <div class="pd-prf-detail-item">
+                                        <div class="pd-prf-detail-icon">
+                                            <i class="bi bi-telephone"></i>
+                                        </div>
+                                        <div class="pd-prf-detail-content">
+                                            <span>Phone Number</span>
+                                            <strong id="pdPrfPhone">Loading...</strong>
+                                        </div>
+                                    </div>
+                                    <!--- Email --->
+                                    <div class="pd-prf-detail-item">
+                                        <div class="pd-prf-detail-icon">
+                                            <i class="bi bi-envelope"></i>
+                                        </div>
+                                        <div class="pd-prf-detail-content">
+                                            <span>Email Address</span>
+                                            <strong id="pdPrfEmailAddress">Loading...</strong>
+                                        </div>
+                                    </div>
+                                    <!--- Account Type --->
+                                    <div class="pd-prf-detail-item">
+                                        <div class="pd-prf-detail-icon">
+                                            <i class="bi bi-person-badge"></i>
+                                        </div>
+                                        <div class="pd-prf-detail-content">
+                                            <span>Account Type</span>
+                                            <strong id="pdPrfAccountType">Loading...</strong>
+                                        </div>
+                                    </div>
+                                    <!--- Account Status --->
+                                    <div class="pd-prf-detail-item">
+                                        <div class="pd-prf-detail-icon">
+                                            <i class="bi bi-shield-check"></i>
+                                        </div>
+                                        <div class="pd-prf-detail-content">
+                                            <span>Account Status</span>
+                                            <strong class="pd-prf-status-active">Active</strong>
+                                        </div>
+                                    </div>
+                                    <!--- Registered Email --->
+                                    <div class="pd-prf-detail-item">
+                                        <div class="pd-prf-detail-icon">
+                                            <i class="bi bi-at"></i>
+                                        </div>
+                                        <div class="pd-prf-detail-content">
+                                            <span>Registered Email</span>
+                                            <strong id="pdPrfRegisteredEmail">Loading...</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--- Account Information --->
+                        <div class="pd-prf-account-card">
+                            <div class="pd-prf-card-heading">
+                                <div>
+                                    <span>Account Information</span>
+                                    <h3>Security & Access</h3>
+                                </div>
+                                <span class="pd-prf-card-icon"><i class="bi bi-shield-lock"></i></span>
+                            </div>
+                            <div class="pd-prf-security-grid">
+
+                                <div class="pd-prf-security-item change-btn">
+                                    <div class="pd-prf-security-icon">
+                                        <i class="bi bi-key"></i>
+                                    </div>
+                                    <div>
+                                        <span>Change Password</span>
+                                        <strong>••••••••</strong>
+                                        <small>Password protected</small>
+                                    </div>
+                                    <div class="pd-chan-btn-di">
+                                        <a href="404.html"><button class="cha-pass-btn">Change</button></a>
+                                    </div>
+                                </div>
+
+                                <div class="pd-prf-security-item">
+                                    <div class="pd-prf-security-icon">
+                                        <i class="bi bi-person-check"></i>
+                                    </div>
+                                    <div>
+                                        <span>Account Role</span>
+                                        <strong id="pdPrfSecurityRole">Client</strong>
+                                        <small>Role assigned during registration</small>
+                                    </div>
+                                </div>
+                                <div class="pd-prf-security-item">
+                                    <div class="pd-prf-security-icon">
+                                        <i class="bi bi-check-circle"></i>
+                                    </div>
+                                    <div>
+                                        <span>Login Status</span>
+                                        <strong id="pdPrfLoginStatus">Active Session</strong>
+                                        <small>Currently signed in</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--- Profile Notice --->
+                        <div class="pd-prf-notice">
+                            <div class="pd-prf-notice-icon">
+                                <i class="bi bi-info-circle"></i>
+                            </div>
+                            <div>
+                                <strong>Your account information</strong>
+                                <p>Your registered name, phone number, email address and account type are displayed from
+                                    your saved account information.</p>
+                            </div>
+                        </div>
+                    </section>
+                    <!--- Profile Page End --->
+                </div>
+            </main>
+        </div>
+        <!--- Main Area End --->
+    </div>
+    <!--- Dashboard End --- -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/client-profile.js"></script>
+</body>
+
+</html>

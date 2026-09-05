@@ -1,0 +1,455 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pharmacy Delivery | Medicines</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Main favicon -->
+    <link rel="icon" href="favicon.ico" />
+
+    <!-- webp favicons -->
+    <link rel="icon" type="image/webp" sizes="16x16" href="assets/images/favicon-16x16.png" />
+    <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/favicon-32x32.png" />
+
+    <!-- Apple -->
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+
+    <!-- Android -->
+    <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/android-chrome-192x192.png" />
+    <link rel="icon" type="image/webp" sizes="512x512" href="assets/images/android-chrome-512x512.png" />
+
+    <!-- Manifest -->
+    <link rel="manifest" href="assets/images/site.webmanifest" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!--- Bootstrap Icon --->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/loader.css" />
+    <link rel="stylesheet" href="assets/css/navbar.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+    <!--- Loader Start --->
+    <div id="pdLdrLoader" class="pd-ldr-loader">
+        <div class="pd-ldr-background">
+            <span class="pd-ldr-particle pd-ldr-particle-1"></span>
+            <span class="pd-ldr-particle pd-ldr-particle-2"></span>
+            <span class="pd-ldr-particle pd-ldr-particle-3"></span>
+            <span class="pd-ldr-particle pd-ldr-particle-4"></span>
+            <span class="pd-ldr-particle pd-ldr-particle-5"></span>
+            <span class="pd-ldr-particle pd-ldr-particle-6"></span>
+        </div>
+        <div class="pd-ldr-content">
+            <div class="pd-ldr-logo">
+                <img src="assets/images/brand-logo.webp" alt="Pharmacy Delivery Platform">
+            </div>
+            <div class="pd-ldr-medical-orbit">
+                <div class="pd-ldr-orbit pd-ldr-orbit-outer"></div>
+                <div class="pd-ldr-orbit pd-ldr-orbit-middle"></div>
+                <div class="pd-ldr-orbit pd-ldr-orbit-inner"></div>
+                <div class="pd-ldr-orbit-icon pd-ldr-orbit-icon-1"><i class="bi bi-capsule"></i></div>
+                <div class="pd-ldr-orbit-icon pd-ldr-orbit-icon-2"><i class="bi bi-heart-pulse"></i></div>
+                <div class="pd-ldr-orbit-icon pd-ldr-orbit-icon-3"><i class="bi bi-shield-check"></i></div>
+                <div class="pd-ldr-core">
+                    <div class="pd-ldr-core-pulse"></div>
+                    <div class="pd-ldr-core-icon"><i class="bi bi-plus-lg"></i></div>
+                </div>
+            </div>
+            <div class="pd-ldr-message-wrap">
+                <span class="pd-ldr-message" id="pdLdrMessage">Preparing your healthcare...</span>
+                <div class="pd-ldr-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--- Loader End --->
+
+    <!--- NavBar --->
+    <div id="pd-navbar-component"></div>
+
+    <!--- Inner Hero Section Start --->
+    <section class="pd-sub-hero">
+        <div class="container">
+            <div class="pd-sub-hero-wrapper">
+                <!--- Hero Content --->
+                <div class="pd-sub-hero-content">
+                    <div class="pd-sub-hero-breadcrumb">
+                        <a href="index.html">Home</a>
+                        <i class="bi bi-chevron-right"></i>
+                        <span>Medicines</span>
+                    </div>
+                    <span class="pd-sub-hero-eyebrow"><i class="bi bi-capsule"></i> MEDICINE STORE</span>
+                    <h1 class="pd-sub-hero-title">Your Medicines, <span>Delivered With Care.</span></h1>
+                    <p class="pd-sub-hero-des">Find everyday medicines and healthcare essentials from the comfort of
+                        your home.</p>
+                </div>
+                <!--- Hero Visual --->
+                <div class="pd-sub-hero-visual">
+                    <div class="pd-sub-hero-orbit pd-sub-hero-orbit-one"></div>
+                    <div class="pd-sub-hero-orbit pd-sub-hero-orbit-two"></div>
+                    <div class="pd-sub-hero-plus pd-sub-hero-plus-one"><i class="bi bi-plus-lg"></i></div>
+                    <div class="pd-sub-hero-plus pd-sub-hero-plus-two"><i class="bi bi-plus-lg"></i></div>
+                    <!--- Medical Card --->
+                    <div class="pd-sub-hero-card">
+                        <div class="pd-sub-hero-card-icon"><i class="bi bi-heart-pulse-fill"></i></div>
+                        <div class="pd-sub-hero-card-content">
+                            <span>YOUR HEALTH</span>
+                            <strong>Our Priority</strong>
+                        </div>
+                        <div class="pd-sub-hero-card-check"><i class="bi bi-check-lg"></i></div>
+                    </div>
+                    <!--- Capsule --->
+                    <div class="pd-sub-hero-capsule pd-sub-hero-capsule-one"><i class="bi bi-capsule"></i></div>
+                    <div class="pd-sub-hero-capsule pd-sub-hero-capsule-two"><i class="bi bi-capsule"></i></div>
+                    <!--- Small Badge --->
+                    <div class="pd-sub-hero-badge">
+                        <i class="bi bi-shield-check"></i>
+                        <div>
+                            <strong>Trusted</strong>
+                            <span>Healthcare</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--- Inner Hero Section End --->
+
+    <!--- Medicine Product Cards Start --->
+    <section class="pd-med-products-section" id="pdMedicineProducts">
+        <div class="container">
+            <!--- Section Heading --->
+            <div class="pd-med-products-heading">
+                <div class="pd-med-products-heading-content">
+                    <span class="pd-med-products-eyebrow"><i class="bi bi-capsule"></i> Pharmacy Collection</span>
+                    <h2 class="pd-med-products-title">Find Your <span>Medicines</span></h2>
+                    <p class="pd-med-products-des">Browse trusted healthcare essentials and find the right products for
+                        your everyday needs.</p>
+                </div>
+                <div class="pd-med-products-result"><strong id="pdMedResultCount">0</strong><span>Products Found</span>
+                </div>
+            </div>
+            <!--- Search and Filter Toolbar --->
+            <div class="pd-med-products-toolbar">
+                <div class="pd-med-search">
+                    <i class="bi bi-search"></i>
+                    <input type="search" id="pdMedSearchInput" placeholder="Search medicines, brands or categories..."
+                        autocomplete="off">
+                    <button type="button" id="pdMedSearchClear" aria-label="Clear Search"><i
+                            class="bi bi-x-lg"></i></button>
+                </div>
+                <button type="button" class="pd-med-filter-toggle" id="pdMedFilterToggle"><i
+                        class="bi bi-sliders2"></i><span>Filters</span><span class="pd-med-filter-count"
+                        id="pdMedFilterCount">0</span></button>
+                <div class="pd-med-sort">
+                    <i class="bi bi-sort-down"></i>
+                    <select id="pdMedSortSelect" aria-label="Sort Medicines">
+                        <option value="default">Sort: Recommended</option>
+                        <option value="low">Price: Low to High</option>
+                        <option value="high">Price: High to Low</option>
+                        <option value="name">Name: A to Z</option>
+                        <option value="rating">Highest Rated</option>
+                    </select>
+                </div>
+            </div>
+            <!--- Product Area --->
+            <div class="row g-4">
+                <!--- Filter Sidebar --->
+                <div class="col-lg-3">
+                    <aside class="pd-med-filter-sidebar" id="pdMedFilterSidebar">
+                        <div class="pd-med-filter-head">
+                            <div><span>Refine Results</span><strong>Filters</strong></div>
+                            <button type="button" id="pdMedFilterClose" aria-label="Close Filters"><i
+                                    class="bi bi-x-lg"></i></button>
+                        </div>
+                        <!--- Category Filter --->
+                        <div class="pd-med-filter-group">
+                            <div class="pd-med-filter-title"><span>Category</span><i class="bi bi-chevron-down"></i>
+                            </div>
+                            <div class="pd-med-category-list">
+                                <label class="pd-med-check"><input type="checkbox" class="pd-med-category"
+                                        value="Pain Relief"><span class="pd-med-checkmark"></span><span>Pain
+                                        Relief</span></label>
+                                <label class="pd-med-check"><input type="checkbox" class="pd-med-category"
+                                        value="Cold & Cough"><span class="pd-med-checkmark"></span><span>Cold &
+                                        Cough</span></label>
+                                <label class="pd-med-check"><input type="checkbox" class="pd-med-category"
+                                        value="Vitamins"><span
+                                        class="pd-med-checkmark"></span><span>Vitamins</span></label>
+                                <label class="pd-med-check"><input type="checkbox" class="pd-med-category"
+                                        value="Digestive Care"><span class="pd-med-checkmark"></span><span>Digestive
+                                        Care</span></label>
+                                <label class="pd-med-check"><input type="checkbox" class="pd-med-category"
+                                        value="First Aid"><span class="pd-med-checkmark"></span><span>First
+                                        Aid</span></label>
+                            </div>
+                        </div>
+                        <!--- Price Filter --->
+                        <div class="pd-med-filter-group">
+                            <div class="pd-med-filter-title"><span>Price Range</span><i class="bi bi-chevron-down"></i>
+                            </div>
+                            <div class="pd-med-price-range">
+                                <div class="pd-med-price-values"><span>₹<strong
+                                            id="pdMedMinPriceValue">0</strong></span><span>₹<strong
+                                            id="pdMedMaxPriceValue">1000</strong></span></div>
+                                <input type="range" id="pdMedMinPrice" min="0" max="1000" value="0" step="10">
+                                <input type="range" id="pdMedMaxPrice" min="0" max="1000" value="1000" step="10">
+                            </div>
+                        </div>
+                        <!--- Availability Filter --->
+                        <div class="pd-med-filter-group">
+                            <div class="pd-med-filter-title"><span>Availability</span><i class="bi bi-chevron-down"></i>
+                            </div>
+                            <label class="pd-med-check"><input type="checkbox" id="pdMedStockOnly"><span
+                                    class="pd-med-checkmark"></span><span>In Stock Only</span></label>
+                        </div>
+                        <button type="button" class="pd-med-clear-filter" id="pdMedClearFilters"><i
+                                class="bi bi-arrow-counterclockwise"></i><span>Clear All Filters</span></button>
+                    </aside>
+                </div>
+                <!--- Products Grid --->
+                <div class="col-lg-9">
+                    <div class="row g-4" id="pdMedProductsGrid"></div>
+                    <!--- No Results View --->
+                    <div class="pd-med-no-results" id="pdMedNoResults">
+                        <div class="pd-med-no-results-icon"><i class="bi bi-search-heart"></i></div>
+                        <h3>No Medicines Found</h3>
+                        <p>We couldn't find any medicines matching your search or selected filters.</p>
+                        <button type="button" class="pd-med-no-results-btn" id="pdMedNoResultsReset"><i
+                                class="bi bi-arrow-counterclockwise"></i><span>Reset Search & Filters</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--- Medicine Product Cards End --->
+
+    <!--- Why Order Medicines From Us Section Start --->
+    <section class="pd-med-why">
+        <div class="container">
+            <div class="pd-med-why-head">
+                <div>
+                    <span class="pd-med-why-kicker"><i class="bi bi-shield-check"></i> WHY CHOOSE US</span>
+                    <h2 class="pd-med-why-title">Why Order Medicines <span>From Us?</span></h2>
+                </div>
+                <p class="pd-med-why-intro">Everything you need for a simpler healthcare shopping experience, from
+                    trusted medicines to doorstep delivery.</p>
+            </div>
+            <div class="pd-med-why-layout">
+                <div class="pd-med-why-visual">
+                    <div class="pd-med-why-glow"></div>
+                    <div class="pd-med-why-circle pd-med-why-circle-one"></div>
+                    <div class="pd-med-why-circle pd-med-why-circle-two"></div>
+                    <div class="pd-med-why-main-card">
+                        <div class="pd-med-why-main-top">
+                            <span class="pd-med-why-main-icon"><i class="bi bi-heart-pulse"></i></span>
+                            <div>
+                                <small>Healthcare you can trust</small>
+                                <strong>Delivered with care</strong>
+                            </div>
+                            <span class="pd-med-why-check"><i class="bi bi-check-lg"></i></span>
+                        </div>
+                        <div class="pd-med-why-main-image">
+                            <img src="assets/images/medicine-delivery.webp" alt="Pharmacy medicine delivery">
+                        </div>
+                        <div class="pd-med-why-route">
+                            <div class="pd-med-why-route-point"><i class="bi bi-shop"></i></div>
+                            <div class="pd-med-why-route-line"><span></span></div>
+                            <div class="pd-med-why-route-point pd-med-why-route-active"><i
+                                    class="bi bi-house-heart"></i></div>
+                        </div>
+                        <div class="pd-med-why-route-text">
+                            <span>Pharmacy</span>
+                            <strong>On the way to your doorstep</strong>
+                            <span>Home</span>
+                        </div>
+                    </div>
+                    <div class="pd-med-why-float pd-med-why-float-one">
+                        <span><i class="bi bi-lightning-charge-fill"></i></span>
+                        <div><small>Fast</small><strong>Delivery</strong></div>
+                    </div>
+                    <div class="pd-med-why-float pd-med-why-float-two">
+                        <span><i class="bi bi-patch-check-fill"></i></span>
+                        <div><small>Trusted</small><strong>Medicines</strong></div>
+                    </div>
+                </div>
+                <div class="pd-med-why-content">
+                    <a href="404.html">
+                        <div class="pd-med-why-card pd-med-why-card-active">
+                            <div class="pd-med-why-card-number">01</div>
+                            <div class="pd-med-why-card-icon"><i class="bi bi-shield-check"></i></div>
+                            <div class="pd-med-why-card-info">
+                                <h3>Trusted Healthcare</h3>
+                                <p>Shop confidently with carefully selected healthcare essentials and medicines.</p>
+                            </div>
+                            <i class="bi bi-arrow-up-right pd-med-why-card-arrow"></i>
+                        </div>
+                    </a>
+                    <a href="404.html">
+                        <div class="pd-med-why-card">
+                            <div class="pd-med-why-card-number">02</div>
+                            <div class="pd-med-why-card-icon"><i class="bi bi-truck"></i></div>
+                            <div class="pd-med-why-card-info">
+                                <h3>Fast Doorstep Delivery</h3>
+                                <p>Get your everyday medicines delivered conveniently to your doorstep.</p>
+                            </div>
+                            <i class="bi bi-arrow-up-right pd-med-why-card-arrow"></i>
+                        </div>
+                    </a>
+                    <a href="404.html">
+                        <div class="pd-med-why-card">
+                            <div class="pd-med-why-card-number">03</div>
+                            <div class="pd-med-why-card-icon"><i class="bi bi-file-earmark-medical"></i></div>
+                            <div class="pd-med-why-card-info">
+                                <h3>Simple Prescription Ordering</h3>
+                                <p>Upload your prescription and make your medicine ordering process easier.</p>
+                            </div>
+                            <i class="bi bi-arrow-up-right pd-med-why-card-arrow"></i>
+                        </div>
+                    </a>
+                    <a href="404.html">
+                        <div class="pd-med-why-card">
+                            <div class="pd-med-why-card-number">04</div>
+                            <div class="pd-med-why-card-icon"><i class="bi bi-clock-history"></i></div>
+                            <div class="pd-med-why-card-info">
+                                <h3>Order When You Need</h3>
+                                <p>Browse your medicines and place orders whenever it is convenient for you.</p>
+                            </div>
+                            <i class="bi bi-arrow-up-right pd-med-why-card-arrow"></i>
+                        </div>
+                    </a>
+                    <div class="pd-med-why-trust">
+                        <div class="pd-med-why-trust-avatars">
+                            <span><i class="bi bi-person-fill"></i></span>
+                            <span><i class="bi bi-person-fill"></i></span>
+                            <span><i class="bi bi-person-fill"></i></span>
+                            <span><i class="bi bi-person-fill"></i></span>
+                        </div>
+                        <div>
+                            <strong>Healthcare made easier</strong>
+                            <small>Simple ordering. Reliable delivery.</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--- Why Order Medicines From Us Section End --->
+
+    <!--- Fast Delivery Strip Start --->
+    <section class="pd-med-delivery-strip">
+        <div class="container">
+            <div class="pd-med-delivery-strip-wrapper">
+                <div class="pd-med-delivery-strip-icon">
+                    <i class="bi bi-lightning-charge-fill"></i>
+                </div>
+                <div class="pd-med-delivery-strip-content">
+                    <span>FAST & RELIABLE DELIVERY</span>
+                    <h2>Your Medicines, Delivered Without The Wait.</h2>
+                    <p>Order your essentials today and get them delivered safely to your doorstep.</p>
+                </div>
+                <div class="pd-med-delivery-strip-points">
+                    <div class="pd-med-delivery-strip-point">
+                        <i class="bi bi-clock-history"></i>
+                        <div><strong>Quick Dispatch</strong><small>Orders processed fast</small></div>
+                    </div>
+                    <div class="pd-med-delivery-strip-point">
+                        <i class="bi bi-box-seam"></i>
+                        <div><strong>Secure Packing</strong><small>Carefully packed</small></div>
+                    </div>
+                    <div class="pd-med-delivery-strip-point">
+                        <i class="bi bi-geo-alt"></i>
+                        <div><strong>Doorstep Delivery</strong><small>Right to your door</small></div>
+                    </div>
+                </div>
+                <a href="medicines.html" class="pd-med-delivery-strip-btn">Shop Medicines<i
+                        class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+    <!--- Fast Delivery Strip End --->
+
+
+    <!--- CTA Section Start --->
+    <section class="pd-cta-section">
+        <div class="container">
+            <div class="pd-cta-card">
+                <div class="pd-cta-pattern"></div>
+                <div class="pd-cta-orbit pd-cta-orbit-one"></div>
+                <div class="pd-cta-orbit pd-cta-orbit-two"></div>
+                <!--- CTA Content --->
+                <div class="pd-cta-content">
+                    <div class="pd-cta-badge"><i class="bi bi-heart-pulse-fill"></i><span>Your Health, Delivered</span>
+                    </div>
+                    <h2 class="pd-cta-title">Find the Right Medicines <br><span>for You.</span></h2>
+                    <p class="pd-cta-des">Get trusted medicines and healthcare essentials delivered to your doorstep
+                        with a simple, secure and convenient experience.</p>
+                    <div class="pd-cta-actions">
+                        <a href="prescription.html" class="pd-cta-primary-btn"><span>Upload Prescription</span><i
+                                class="bi bi-arrow-up-right"></i></a>
+                        <a href="contact.html" class="pd-cta-secondary-btn"><i
+                                class="bi bi-file-earmark-medical"></i><span>Talk to Us</span></a>
+                    </div>
+                </div>
+                <!--- CTA Visual --->
+                <div class="pd-cta-visual">
+                    <div class="pd-cta-visual-glow"></div>
+                    <div class="pd-cta-delivery-circle">
+                        <div class="pd-cta-delivery-icon"><i class="bi bi-truck"></i></div>
+                        <div class="pd-cta-delivery-line"></div>
+                        <div class="pd-cta-delivery-box"><i class="bi bi-capsule"></i></div>
+                    </div>
+                    <div class="pd-cta-floating-card pd-cta-floating-card-one">
+                        <div class="pd-cta-floating-icon"><i class="bi bi-shield-check"></i></div>
+                        <div><small>Safe & Trusted</small><strong>Healthcare</strong></div>
+                    </div>
+                    <div class="pd-cta-floating-card pd-cta-floating-card-two">
+                        <div class="pd-cta-floating-icon"><i class="bi bi-clock"></i></div>
+                        <div><small>Fast Delivery</small><strong>At Your Door</strong></div>
+                    </div>
+                    <div class="pd-cta-floating-plus pd-cta-floating-plus-one">+</div>
+                    <div class="pd-cta-floating-plus pd-cta-floating-plus-two">+</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--- CTA Section End --->
+
+    <!--- Footer --->
+    <div id="pd-footer-component"></div>
+
+    <!--- Js Files --->
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="assets/js/components.js"></script>
+    <script src="assets/js/loader.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/footer.js"></script>
+
+    <!-- Page JS -->
+    <script src="assets/js/sub-hero.js"></script>
+    <script src="assets/js/medicines.js"></script>
+</body>
+
+</html>

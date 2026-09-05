@@ -1,0 +1,369 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Delivery | Client Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+<body>
+    <!--- Client Dashboard Start --->
+    <div class="pd-dsh-dashboard">
+        <!--- Sidebar Start --->
+        <aside class="pd-dsh-sidebar" id="pdDshSidebar">
+            <div class="pd-dsh-sidebar-logo">
+                <a href="index.html">
+                    <img src="assets/images/brand-logo.webp" alt="Pharmacy Delivery">
+                </a>
+            </div>
+            <div class="pd-dsh-sidebar-user">
+                <div class="pd-dsh-sidebar-user-image">
+                    <img src="assets/images/profile-1.webp" alt="Profile">
+                </div>
+                <div>
+                    <small>Signed in as</small>
+                    <strong id="pdDshSidebarEmail">client@example.com</strong>
+                </div>
+            </div>
+            <nav class="pd-dsh-sidebar-nav">
+                <a href="client-dashboard.html" class="pd-dsh-sidebar-link active" data-page="client-dashboard.html">
+                    <span class="pd-dsh-sidebar-link-icon"><i class="bi bi-grid-1x2"></i></span>
+                    <span>Dashboard</span>
+                    <i class="bi bi-chevron-right"></i>
+                </a>
+                <a href="client-orders.html" class="pd-dsh-sidebar-link" data-page="client-orders.html">
+                    <span class="pd-dsh-sidebar-link-icon"><i class="bi bi-bag-check"></i></span>
+                    <span>My Orders</span>
+                    <i class="bi bi-chevron-right"></i>
+                </a>
+                <a href="client-prescription.html" class="pd-dsh-sidebar-link" data-page="client-prescription.html">
+                    <span class="pd-dsh-sidebar-link-icon"><i class="bi bi-file-earmark-medical"></i></span>
+                    <span>Prescriptions</span>
+                    <i class="bi bi-chevron-right"></i>
+                </a>
+                <a href="client-profile.html" class="pd-dsh-sidebar-link" data-page="client-profile.html">
+                    <span class="pd-dsh-sidebar-link-icon"><i class="bi bi-person"></i></span>
+                    <span>Profile</span>
+                    <i class="bi bi-chevron-right"></i>
+                </a>
+                <button type="button" class="pd-dsh-sidebar-link pd-dsh-logout" id="pdDshLogout">
+                    <span class="pd-dsh-sidebar-link-icon"><i class="bi bi-box-arrow-right"></i></span>
+                    <span>Logout</span>
+                    <i class="bi bi-chevron-right"></i>
+                </button>
+            </nav>
+            <div class="pd-dsh-sidebar-bottom">
+                <div class="pd-dsh-sidebar-support">
+                    <i class="bi bi-headset"></i>
+                    <div>
+                        <small>Need Assistance?</small>
+                        <strong>Contact Support</strong>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!--- Sidebar End --->
+        <div class="pd-dsh-sidebar-overlay" id="pdDshSidebarOverlay"></div>
+        <!--- Main Dashboard Start --->
+        <main class="pd-dsh-main">
+            <!--- Topbar Start --->
+            <header class="pd-dsh-topbar">
+                <div class="pd-dsh-topbar-left">
+                    <button type="button" class="pd-dsh-menu-toggle" id="pdDshMenuToggle" aria-label="Open menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="pd-dsh-page-title">
+                        <span>Pharmacy Delivery</span>
+                        <h1>Client Dashboard</h1>
+                    </div>
+                </div>
+                <div class="pd-dsh-topbar-right">
+                    <div class="pd-dsh-topbar-user">
+                        <div class="pd-dsh-topbar-user-text">
+                            <small>Signed in as</small>
+                            <strong id="pdDshTopbarEmail">client@example.com</strong>
+                        </div>
+                        <div class="pd-dsh-topbar-avatar">
+                           <img src="assets/images/profile-1.webp" alt="Profile">
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!--- Topbar End --->
+            <!--- Dashboard Content Start --->
+            <div class="pd-dsh-content">
+                <div class="pd-dsh-overview">
+                    <!--- Welcome Section --->
+                    <section class="pd-dsh-welcome">
+                        <div class="pd-dsh-welcome-content">
+                            <span class="pd-dsh-kicker">
+                                <i class="bi bi-grid-1x2"></i>
+                                Client Overview
+                            </span>
+                            <h2>Welcome Back, <span id="pdDshClientName">Client</span></h2>
+                            <p>Here's a quick look at your medicines, orders and prescription activity.</p>
+                        </div>
+                        <a href="client-orders.html" class="pd-dsh-welcome-action">
+                            <i class="bi bi-plus-lg"></i>
+                            Order Medicines
+                        </a>
+                    </section>
+                    <!--- Statistics Cards --->
+                    <section class="pd-dsh-stats">
+                        <div class="pd-dsh-stat-card">
+                            <div class="pd-dsh-stat-icon">
+                                <i class="bi bi-bag-check"></i>
+                            </div>
+                            <div class="pd-dsh-stat-content">
+                                <small>Total Orders</small>
+                                <strong>20</strong>
+                                <span><i class="bi bi-arrow-up-right"></i> Your order history</span>
+                            </div>
+                        </div>
+                        <div class="pd-dsh-stat-card">
+                            <div class="pd-dsh-stat-icon">
+                                <i class="bi bi-truck"></i>
+                            </div>
+                            <div class="pd-dsh-stat-content">
+                                <small>Active Orders</small>
+                                <strong>3</strong>
+                                <span><i class="bi bi-clock"></i> Currently processing</span>
+                            </div>
+                        </div>
+                        <div class="pd-dsh-stat-card">
+                            <div class="pd-dsh-stat-icon">
+                                <i class="bi bi-file-earmark-medical"></i>
+                            </div>
+                            <div class="pd-dsh-stat-content">
+                                <small>Prescriptions</small>
+                                <strong>10</strong>
+                                <span><i class="bi bi-shield-check"></i> Securely stored</span>
+                            </div>
+                        </div>
+                        <div class="pd-dsh-stat-card">
+                            <div class="pd-dsh-stat-icon">
+                                <i class="bi bi-heart-pulse"></i>
+                            </div>
+                            <div class="pd-dsh-stat-content">
+                                <small>Healthcare Status</small>
+                                <strong>Good</strong>
+                                <span><i class="bi bi-check-circle"></i> Account active</span>
+                            </div>
+                        </div>
+                    </section>
+                    <!--- Main Overview Grid --->
+                    <div class="pd-dsh-overview-grid">
+                        <!--- Recent Orders --->
+                        <section class="pd-dsh-panel pd-dsh-orders-panel">
+                            <div class="pd-dsh-panel-heading">
+                                <div>
+                                    <span>Order Activity</span>
+                                    <h2>Recent Orders</h2>
+                                </div>
+                                <a href="client-orders.html">View All <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                            <div class="pd-dsh-order-list">
+                                <div class="pd-dsh-order-item">
+                                    <div class="pd-dsh-order-icon"><i class="bi bi-capsule"></i></div>
+                                    <div class="pd-dsh-order-info">
+                                        <strong>Paracetamol 500mg Tablets</strong>
+                                        <small>Order #PD10482 <span>•</span> 02 Sep 2026</small>
+                                    </div>
+                                    <div class="pd-dsh-order-meta">
+                                        <strong>₹249.00</strong>
+                                        <span class="pd-dsh-status pd-dsh-status-delivered">Delivered</span>
+                                    </div>
+                                </div>
+                                <div class="pd-dsh-order-item">
+                                    <div class="pd-dsh-order-icon"><i class="bi bi-heart-pulse"></i></div>
+                                    <div class="pd-dsh-order-info">
+                                        <strong>Vitamin D3 1000 IU Capsules</strong>
+                                        <small>Order #PD10471 <span>•</span> 31 Aug 2026</small>
+                                    </div>
+                                    <div class="pd-dsh-order-meta">
+                                        <strong>₹499.00</strong>
+                                        <span class="pd-dsh-status pd-dsh-status-delivered">Delivered</span>
+                                    </div>
+                                </div>
+                                <div class="pd-dsh-order-item">
+                                    <div class="pd-dsh-order-icon"><i class="bi bi-droplet"></i></div>
+                                    <div class="pd-dsh-order-info">
+                                        <strong>Cough Relief Syrup</strong>
+                                        <small>Order #PD10463 <span>•</span> 29 Aug 2026</small>
+                                    </div>
+                                    <div class="pd-dsh-order-meta">
+                                        <strong>₹325.00</strong>
+                                        <span class="pd-dsh-status pd-dsh-status-processing">Processing</span>
+                                    </div>
+                                </div>
+                                <div class="pd-dsh-order-item">
+                                    <div class="pd-dsh-order-icon"><i class="bi bi-bandaid"></i></div>
+                                    <div class="pd-dsh-order-info">
+                                        <strong>Complete First Aid Kit</strong>
+                                        <small>Order #PD10455 <span>•</span> 26 Aug 2026</small>
+                                    </div>
+                                    <div class="pd-dsh-order-meta">
+                                        <strong>₹899.00</strong>
+                                        <span class="pd-dsh-status pd-dsh-status-shipped">Shipped</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!--- Quick Access --->
+                        <section class="pd-dsh-panel pd-dsh-quick-panel">
+                            <div class="pd-dsh-panel-heading">
+                                <div>
+                                    <span>Quick Access</span>
+                                    <h2>What Do You Need?</h2>
+                                </div>
+                            </div>
+                            <div class="pd-dsh-quick-list">
+                                <a href="client-orders.html" class="pd-dsh-quick-item">
+                                    <span class="pd-dsh-quick-icon"><i class="bi bi-capsule"></i></span>
+                                    <span class="pd-dsh-quick-content">
+                                        <strong>Order Medicines</strong>
+                                        <small>Browse healthcare essentials</small>
+                                    </span>
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </a>
+                                <a href="client-prescription.html" class="pd-dsh-quick-item">
+                                    <span class="pd-dsh-quick-icon"><i class="bi bi-file-earmark-medical"></i></span>
+                                    <span class="pd-dsh-quick-content">
+                                        <strong>Upload Prescription</strong>
+                                        <small>Send your prescription securely</small>
+                                    </span>
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </a>
+                                <a href="client-orders.html" class="pd-dsh-quick-item">
+                                    <span class="pd-dsh-quick-icon"><i class="bi bi-box-seam"></i></span>
+                                    <span class="pd-dsh-quick-content">
+                                        <strong>Track My Order</strong>
+                                        <small>Check your delivery status</small>
+                                    </span>
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </a>
+                                <a href="client-profile.html" class="pd-dsh-quick-item">
+                                    <span class="pd-dsh-quick-icon"><i class="bi bi-person"></i></span>
+                                    <span class="pd-dsh-quick-content">
+                                        <strong>My Profile</strong>
+                                        <small>Manage your account details</small>
+                                    </span>
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </a>
+                            </div>
+                        </section>
+                    </div>
+                    <!--- Secondary Overview Grid --->
+                    <div class="pd-dsh-secondary-grid">
+                        <!--- Prescriptions --->
+                        <section class="pd-dsh-panel pd-dsh-prescription-panel">
+                            <div class="pd-dsh-panel-heading">
+                                <div>
+                                    <span>Prescription Center</span>
+                                    <h2>My Prescriptions</h2>
+                                </div>
+                                <a href="client-prescription.html">View All <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                            <div class="pd-dsh-prescription-list">
+                                <div class="pd-dsh-prescription-item">
+                                    <div class="pd-dsh-prescription-icon">
+                                        <i class="bi bi-file-earmark-medical"></i>
+                                    </div>
+                                    <div class="pd-dsh-prescription-info">
+                                        <strong>Prescription #RX2084</strong>
+                                        <small>Uploaded on 01 Sep 2026</small>
+                                        <span><i class="bi bi-shield-check"></i> Pharmacist review completed</span>
+                                    </div>
+                                    <span class="pd-dsh-status pd-dsh-status-verified">Verified</span>
+                                </div>
+                                <div class="pd-dsh-prescription-item">
+                                    <div class="pd-dsh-prescription-icon">
+                                        <i class="bi bi-file-earmark-medical"></i>
+                                    </div>
+                                    <div class="pd-dsh-prescription-info">
+                                        <strong>Prescription #RX2071</strong>
+                                        <small>Uploaded on 24 Aug 2026</small>
+                                        <span><i class="bi bi-check-circle"></i> Available for ordering</span>
+                                    </div>
+                                    <span class="pd-dsh-status pd-dsh-status-active">Active</span>
+                                </div>
+                            </div>
+                        </section>
+                        <!--- Account Summary --->
+                        <section class="pd-dsh-panel pd-dsh-account-panel">
+                            <div class="pd-dsh-panel-heading">
+                                <div>
+                                    <span>Account</span>
+                                    <h2>Account Summary</h2>
+                                </div>
+                                <a href="client-profile.html" aria-label="Edit profile">
+                                    <i class="bi bi-pencil"></i>
+                                </a>
+                            </div>
+                            <div class="pd-dsh-account-list">
+                                <div class="pd-dsh-account-row">
+                                    <span><i class="bi bi-person"></i> Account Type</span>
+                                    <strong>Client</strong>
+                                </div>
+                                <div class="pd-dsh-account-row">
+                                    <span><i class="bi bi-envelope"></i> Email</span>
+                                    <strong id="pdDshAccountEmail">client@example.com</strong>
+                                </div>
+                                <div class="pd-dsh-account-row">
+                                    <span><i class="bi bi-telephone"></i> Phone</span>
+                                    <strong id="pdDshAccountPhone">None</strong>
+                                </div>
+                                <div class="pd-dsh-account-row">
+                                    <span><i class="bi bi-shield-check"></i> Account Status</span>
+                                    <strong class="pd-dsh-account-active">Active</strong>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <!--- Latest Delivery --->
+                    <section class="pd-dsh-delivery">
+                        <div class="pd-dsh-delivery-icon">
+                            <i class="bi bi-truck"></i>
+                        </div>
+                        <div class="pd-dsh-delivery-info">
+                            <small>Latest Delivery</small>
+                            <strong>Your order #PD10455 is on the way</strong>
+                            <span>Expected delivery: 05 Sep 2026 <b>•</b> Standard Delivery</span>
+                        </div>
+                        <div class="pd-dsh-delivery-progress">
+                            <span class="active"><i class="bi bi-check-lg"></i></span>
+                            <span class="active"><i class="bi bi-check-lg"></i></span>
+                            <span class="active"><i class="bi bi-truck"></i></span>
+                            <span><i class="bi bi-house"></i></span>
+                        </div>
+                        <a href="client-orders.html" class="pd-dsh-track-btn">
+                            Track Order
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </section>
+                    <!--- Support --->
+                    <section class="pd-dsh-support">
+                        <div class="pd-dsh-support-icon">
+                            <i class="bi bi-headset"></i>
+                        </div>
+                        <div>
+                            <small>Need Assistance?</small>
+                            <strong>Talk to our healthcare support team</strong>
+                        </div>
+                        <a href="contact.html">Contact Support <i class="bi bi-arrow-right"></i></a>
+                    </section>
+                </div>
+            </div>
+            <!--- Dashboard Content End --->
+        </main>
+        <!--- Main Dashboard End --->
+    </div>
+    <!--- Client Dashboard End --->
+    <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

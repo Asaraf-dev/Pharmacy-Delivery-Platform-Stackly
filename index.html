@@ -1,0 +1,917 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pharmacy Delivery | Home</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Main favicon -->
+    <link rel="icon" href="favicon.ico" />
+
+    <!-- webp favicons -->
+    <link rel="icon" type="image/webp" sizes="16x16" href="assets/images/favicon-16x16.png" />
+    <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/favicon-32x32.png" />
+
+    <!-- Apple -->
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+
+    <!-- Android -->
+    <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/android-chrome-192x192.png" />
+    <link rel="icon" type="image/webp" sizes="512x512" href="assets/images/android-chrome-512x512.png" />
+
+    <!-- Manifest -->
+    <link rel="manifest" href="assets/images/site.webmanifest" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!--- Bootstrap Icon --->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/loader.css" />
+    <link rel="stylesheet" href="assets/css/navbar.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+    <!--- Loader Start --->
+    <div id="pdLdrLoader" class="pd-ldr-loader">
+        <div class="pd-ldr-background">
+            <span class="pd-ldr-particle pd-ldr-particle-1"></span>
+            <span class="pd-ldr-particle pd-ldr-particle-2"></span>
+            <span class="pd-ldr-particle pd-ldr-particle-3"></span>
+            <span class="pd-ldr-particle pd-ldr-particle-4"></span>
+            <span class="pd-ldr-particle pd-ldr-particle-5"></span>
+            <span class="pd-ldr-particle pd-ldr-particle-6"></span>
+        </div>
+        <div class="pd-ldr-content">
+            <div class="pd-ldr-logo">
+                <img src="assets/images/brand-logo.webp" alt="Pharmacy Delivery Platform">
+            </div>
+            <div class="pd-ldr-medical-orbit">
+                <div class="pd-ldr-orbit pd-ldr-orbit-outer"></div>
+                <div class="pd-ldr-orbit pd-ldr-orbit-middle"></div>
+                <div class="pd-ldr-orbit pd-ldr-orbit-inner"></div>
+                <div class="pd-ldr-orbit-icon pd-ldr-orbit-icon-1"><i class="bi bi-capsule"></i></div>
+                <div class="pd-ldr-orbit-icon pd-ldr-orbit-icon-2"><i class="bi bi-heart-pulse"></i></div>
+                <div class="pd-ldr-orbit-icon pd-ldr-orbit-icon-3"><i class="bi bi-shield-check"></i></div>
+                <div class="pd-ldr-core">
+                    <div class="pd-ldr-core-pulse"></div>
+                    <div class="pd-ldr-core-icon"><i class="bi bi-plus-lg"></i></div>
+                </div>
+            </div>
+            <div class="pd-ldr-message-wrap">
+                <span class="pd-ldr-message" id="pdLdrMessage">Preparing your healthcare...</span>
+                <div class="pd-ldr-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--- Loader End --->
+
+    <!--- NavBar --->
+    <div id="pd-navbar-component"></div>
+
+    <!--- Hero Section Start --->
+    <section class="pd-ind-hero">
+        <div class="container">
+            <div class="pd-ind-hero-wrapper">
+                <!--- Hero Content --->
+                <div class="pd-ind-hero-content">
+                    <div class="pd-ind-hero-badge">
+                        <span class="pd-ind-hero-badge-icon"><i class="bi bi-heart-pulse-fill"></i></span>
+                        <span>Healthcare Delivered With Care</span>
+                        <span class="pd-ind-hero-badge-dot"></span>
+                    </div>
+                    <h1 class="pd-ind-hero-title">Your Health,<br><span>Delivered Faster.</span></h1>
+                    <p class="pd-ind-hero-des">Order medicines, upload prescriptions, and get trusted healthcare
+                        essentials delivered right to your doorstep.</p>
+                    <!--- Hero Actions --->
+                    <div class="pd-ind-hero-actions">
+                        <a href="medicines.html" class="pd-ind-hero-btn pd-ind-hero-btn-primary"><span>Explore
+                                Medicines</span><i class="bi bi-arrow-up-right"></i></a>
+                        <a href="prescription.html" class="pd-ind-hero-btn pd-ind-hero-btn-outline"><span>Upload
+                                Prescription</span><i class="bi bi-cloud-arrow-up"></i></a>
+                    </div>
+                    <!--- Hero Trust --->
+                    <div class="pd-ind-hero-trust">
+                        <div class="pd-ind-hero-trust-users">
+                            <span><i class="bi bi-person-fill"></i></span>
+                            <span><i class="bi bi-person-fill"></i></span>
+                            <span><i class="bi bi-person-fill"></i></span>
+                            <span><i class="bi bi-plus"></i></span>
+                        </div>
+                        <div class="pd-ind-hero-trust-info">
+                            <div class="pd-ind-hero-stars"><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                            <strong>10,000+ Happy Customers</strong>
+                        </div>
+                    </div>
+                </div>
+                <!--- Hero Visual --->
+                <div class="pd-ind-hero-visual">
+                    <div class="pd-ind-hero-visual-glow"></div>
+                    <div class="pd-ind-hero-image-wrap">
+                        <img src="assets/images/hero-medicine-delivery.webp" alt="Pharmacy medicine delivery"
+                            class="pd-ind-hero-image">
+                        <div class="pd-ind-hero-image-ring pd-ind-hero-image-ring-one"></div>
+                        <div class="pd-ind-hero-image-ring pd-ind-hero-image-ring-two"></div>
+                    </div>
+                    <!--- Floating Delivery Card --->
+                    <div class="pd-ind-hero-float pd-ind-hero-delivery-card">
+                        <div class="pd-ind-hero-float-icon"><i class="bi bi-truck"></i></div>
+                        <div class="pd-ind-hero-float-content">
+                            <span>Delivery Status</span>
+                            <strong>Arriving Soon</strong>
+                            <div class="pd-ind-hero-delivery-progress"><span></span></div>
+                        </div>
+                        <div class="pd-ind-hero-float-check"><i class="bi bi-check-lg"></i></div>
+                    </div>
+                    <!--- Floating Prescription Card --->
+                    <div class="pd-ind-hero-float pd-ind-hero-prescription-card">
+                        <div class="pd-ind-hero-prescription-icon"><i class="bi bi-file-earmark-medical"></i></div>
+                        <div class="pd-ind-hero-prescription-content">
+                            <span>Prescription</span>
+                            <strong>Verified</strong>
+                        </div>
+                        <i class="bi bi-patch-check-fill"></i>
+                    </div>
+                    <!--- Floating Rating Card --->
+                    <div class="pd-ind-hero-rating-card">
+                        <div class="pd-ind-hero-rating-icon"><i class="bi bi-star-fill"></i></div>
+                        <div class="pd-ind-hero-rating-content">
+                            <strong>4.9</strong>
+                            <span>Customer Rating</span>
+                        </div>
+                    </div>
+                    <!--- Decorative Medical Icons --->
+                    <div class="pd-ind-hero-decoration pd-ind-hero-decoration-one"><i class="bi bi-capsule"></i></div>
+                    <div class="pd-ind-hero-decoration pd-ind-hero-decoration-two"><i class="bi bi-plus-lg"></i></div>
+                    <div class="pd-ind-hero-decoration pd-ind-hero-decoration-three"><i class="bi bi-heart-pulse"></i>
+                    </div>
+                </div>
+            </div>
+            <!--- Hero Bottom Stats --->
+            <div class="pd-ind-hero-stats">
+                <div class="pd-ind-hero-stat">
+                    <div class="pd-ind-hero-stat-icon"><i class="bi bi-lightning-charge-fill"></i></div>
+                    <div class="pd-ind-hero-stat-content"><strong>30 Min</strong><span>Express Delivery</span></div>
+                </div>
+                <div class="pd-ind-hero-stat">
+                    <div class="pd-ind-hero-stat-icon"><i class="bi bi-shield-check"></i></div>
+                    <div class="pd-ind-hero-stat-content"><strong>100%</strong><span>Genuine Medicines</span></div>
+                </div>
+                <div class="pd-ind-hero-stat">
+                    <div class="pd-ind-hero-stat-icon"><i class="bi bi-capsule-pill"></i></div>
+                    <div class="pd-ind-hero-stat-content"><strong>5,000+</strong><span>Medicines Available</span></div>
+                </div>
+                <div class="pd-ind-hero-stat">
+                    <div class="pd-ind-hero-stat-icon"><i class="bi bi-headset"></i></div>
+                    <div class="pd-ind-hero-stat-content"><strong>24/7</strong><span>Pharmacy Support</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--- Hero Section End --->
+
+    <!--- About Us Section Start --->
+    <section class="pd-ind-about">
+        <div class="container">
+            <div class="pd-ind-about-wrapper">
+                <!--- About Visual --->
+                <div class="pd-ind-about-visual">
+                    <div class="pd-ind-about-visual-card">
+                        <div class="pd-ind-about-circle pd-ind-about-circle-one"></div>
+                        <div class="pd-ind-about-circle pd-ind-about-circle-two"></div>
+                        <div class="pd-ind-about-pharmacy-image">
+                            <img src="assets/images/about-pharmacy.webp" alt="Pharmacy Delivery Platform">
+                        </div>
+                        <div class="pd-ind-about-floating pd-ind-about-floating-one">
+                            <span><i class="bi bi-shield-check"></i></span>
+                            <div><strong>100%</strong><small>Trusted Care</small></div>
+                        </div>
+                        <div class="pd-ind-about-floating pd-ind-about-floating-two">
+                            <span><i class="bi bi-truck"></i></span>
+                            <div><strong>Fast</strong><small>Medicine Delivery</small></div>
+                        </div>
+                        <div class="pd-ind-about-plus pd-ind-about-plus-one">+</div>
+                        <div class="pd-ind-about-plus pd-ind-about-plus-two">+</div>
+                    </div>
+                </div>
+                <!--- About Content --->
+                <div class="pd-ind-about-content">
+                    <span class="pd-ind-about-eyebrow"><i class="bi bi-heart-pulse"></i> ABOUT OUR PHARMACY</span>
+                    <h2 class="pd-ind-about-title">Healthcare made <span>simple, safe</span> & accessible.</h2>
+                    <p class="pd-ind-about-des">We make getting your everyday medicines and healthcare essentials easier
+                        with a trusted digital pharmacy experience designed around your needs.</p>
+                    <p class="pd-ind-about-des">From finding the right products to getting them delivered to your
+                        doorstep, we bring convenience, reliability and care together in one place.</p>
+                    <!--- About Features --->
+                    <div class="pd-ind-about-features">
+                        <div class="pd-ind-about-feature">
+                            <div class="pd-ind-about-feature-icon"><i class="bi bi-patch-check"></i></div>
+                            <div><strong>Trusted Medicines</strong><small>Quality healthcare products</small></div>
+                        </div>
+                        <div class="pd-ind-about-feature">
+                            <div class="pd-ind-about-feature-icon"><i class="bi bi-clock-history"></i></div>
+                            <div><strong>Quick Delivery</strong><small>Healthcare at your doorstep</small></div>
+                        </div>
+                        <div class="pd-ind-about-feature">
+                            <div class="pd-ind-about-feature-icon"><i class="bi bi-person-heart"></i></div>
+                            <div><strong>Patient First</strong><small>Care built around you</small></div>
+                        </div>
+                        <div class="pd-ind-about-feature">
+                            <div class="pd-ind-about-feature-icon"><i class="bi bi-headset"></i></div>
+                            <div><strong>Pharmacist Support</strong><small>Help when you need it</small></div>
+                        </div>
+                    </div>
+                    <!--- About Bottom --->
+                    <div class="pd-ind-about-bottom">
+                        <a href="about.html" class="pd-ind-about-btn">Discover Our Story <i
+                                class="bi bi-arrow-right"></i></a>
+                        <div class="pd-ind-about-stats">
+                            <div class="pd-ind-about-stat"><strong>10K+</strong><small>Products</small></div>
+                            <div class="pd-ind-about-stat-divider"></div>
+                            <div class="pd-ind-about-stat"><strong>24/7</strong><small>Support</small></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--- About Us Section End --->
+
+    <!--- Quick Search / Medicine Finder Section Start --->
+    <section class="pd-ind-search">
+        <div class="container">
+            <div class="pd-ind-search-wrapper">
+                <!--- Search Header --->
+                <div class="pd-ind-search-header">
+                    <div class="pd-ind-search-heading">
+                        <span class="pd-ind-search-eyebrow"><i class="bi bi-search"></i> FIND WHAT YOU NEED</span>
+                        <h2 class="pd-ind-search-title">What are you <span>looking for?</span></h2>
+                        <p class="pd-ind-search-des">Search thousands of medicines, healthcare products and wellness
+                            essentials in seconds.</p>
+                    </div>
+                    <div class="pd-ind-search-availability">
+                        <span class="pd-ind-search-availability-dot"></span>
+                        <div>
+                            <strong>Pharmacy Online</strong>
+                            <small>Ready to deliver</small>
+                        </div>
+                    </div>
+                </div>
+                <!--- Search Box --->
+                <div class="pd-ind-search-box">
+                    <div class="pd-ind-search-input-wrap">
+                        <span class="pd-ind-search-input-icon"><i class="bi bi-search"></i></span>
+                        <input type="text" class="pd-ind-search-input" id="pdIndMedicineSearch"
+                            placeholder="Search medicine, brand or health product..." autocomplete="off">
+                        <button type="button" class="pd-ind-search-clear" id="pdIndSearchClear"
+                            aria-label="Clear search"><i class="bi bi-x"></i></button>
+                    </div>
+                    <button type="button" class="pd-ind-search-btn" id="pdIndSearchButton">
+                        <span>Search</span>
+                        <i class="bi bi-arrow-right"></i>
+                    </button>
+                    <!--- Search Results --->
+                    <div class="pd-ind-search-results" id="pdIndSearchResults"></div>
+                </div>
+                <!--- Quick Categories --->
+                <div class="pd-ind-search-quick">
+                    <div class="pd-ind-search-quick-title">
+                        <i class="bi bi-grid-3x3-gap-fill"></i>
+                        <span>Quick Search</span>
+                    </div>
+                    <div class="pd-ind-search-chips">
+                        <button type="button" class="pd-ind-search-chip" data-search="Pain Relief"><i
+                                class="bi bi-bandaid"></i><span>Pain Relief</span></button>
+                        <button type="button" class="pd-ind-search-chip" data-search="Vitamins"><i
+                                class="bi bi-capsule"></i><span>Vitamins</span></button>
+                        <button type="button" class="pd-ind-search-chip" data-search="Cold & Flu"><i
+                                class="bi bi-thermometer-half"></i><span>Cold & Flu</span></button>
+                        <button type="button" class="pd-ind-search-chip" data-search="Diabetes Care"><i
+                                class="bi bi-droplet-half"></i><span>Diabetes Care</span></button>
+                        <button type="button" class="pd-ind-search-chip" data-search="Skin Care"><i
+                                class="bi bi-heart"></i><span>Skin Care</span></button>
+                        <button type="button" class="pd-ind-search-chip" data-search="Baby Care"><i
+                                class="bi bi-emoji-smile"></i><span>Baby Care</span></button>
+                    </div>
+                </div>
+                <!--- Search Bottom --->
+                <div class="pd-ind-search-bottom">
+                    <div class="pd-ind-search-popular">
+                        <span class="pd-ind-search-popular-label">Popular:</span>
+                        <button type="button" data-search="Paracetamol">Paracetamol</button>
+                        <button type="button" data-search="Vitamin D">Vitamin D</button>
+                        <button type="button" data-search="Cough Syrup">Cough Syrup</button>
+                        <button type="button" data-search="First Aid">First Aid</button>
+                    </div>
+                    <a href="prescription.html" class="pd-ind-search-prescription">
+                        <span class="pd-ind-search-prescription-icon"><i class="bi bi-file-earmark-medical"></i></span>
+                        <span class="pd-ind-search-prescription-content"><small>Can't find your
+                                medicine?</small><strong>Upload Prescription</strong></span>
+                        <i class="bi bi-arrow-up-right"></i>
+                    </a>
+                </div>
+                <!--- Decorative Elements --->
+                <div class="pd-ind-search-decoration pd-ind-search-decoration-one"><i class="bi bi-capsule"></i></div>
+                <div class="pd-ind-search-decoration pd-ind-search-decoration-two"><i class="bi bi-plus-lg"></i></div>
+                <div class="pd-ind-search-decoration pd-ind-search-decoration-three"><i class="bi bi-heart-pulse"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--- Quick Search / Medicine Finder Section End --->
+
+    <!--- Featured Medicines Section Start --->
+    <section class="pd-ind-featured">
+        <div class="container">
+            <div class="pd-ind-featured-header">
+                <div class="pd-ind-featured-heading">
+                    <span class="pd-ind-featured-eyebrow"><i class="bi bi-stars"></i> PHARMACY PICKS</span>
+                    <h2 class="pd-ind-featured-title">Featured <span>Medicines</span></h2>
+                    <p class="pd-ind-featured-des">Carefully selected healthcare essentials, trusted by our customers
+                        and ready for fast delivery.</p>
+                </div>
+                <a href="medicines.html" class="pd-ind-featured-view">View All Medicines <i
+                        class="bi bi-arrow-up-right"></i></a>
+            </div>
+            <!--- Featured Products --->
+            <div class="pd-ind-featured-grid">
+                <!--- Medicine Card 1 --->
+                <div class="pd-ind-featured-card">
+                    <div class="pd-ind-featured-card-top">
+                        <span class="pd-ind-featured-badge">BEST SELLER</span>
+                        <button type="button" class="pd-ind-featured-wishlist" aria-label="Add to wishlist"><i
+                                class="bi bi-heart"></i></button>
+                    </div>
+                    <div class="pd-ind-featured-image-wrap">
+                        <span class="pd-ind-featured-discount">-20%</span>
+                        <img src="assets/images/medicine-paracetamol.webp" alt="Paracetamol Tablets">
+                        <div class="pd-ind-featured-quick">
+                            <a href="404.html"><button type="button"><i class="bi bi-eye"></i> Quick View</button></a>
+                        </div>
+                    </div>
+                    <div class="pd-ind-featured-content">
+                        <span class="pd-ind-featured-category">Pain Relief</span>
+                        <h3 class="pd-ind-featured-name">Paracetamol 500mg Tablets</h3>
+                        <p class="pd-ind-featured-info">Effective relief for fever and mild to moderate pain.</p>
+                        <div class="pd-ind-featured-rating">
+                            <span><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-half"></i></span>
+                            <strong>4.8</strong>
+                            <small>(124)</small>
+                        </div>
+                        <div class="pd-ind-featured-bottom">
+                            <div class="pd-ind-featured-price"><strong>₹4.99</strong><del>₹6.25</del></div>
+                            <!--- Medicine Card 1 --->
+                            <button type="button" class="pd-ind-featured-cart" data-id="medicine-paracetamol"
+                                data-name="Paracetamol 500mg Tablets" data-category="Pain Relief" data-price="4.99"
+                                data-image="assets/images/medicine-paracetamol.webp"><i
+                                    class="bi bi-bag-plus"></i><span>Add</span></button>
+                        </div>
+                    </div>
+                </div>
+                <!--- Medicine Card 2 --->
+                <div class="pd-ind-featured-card">
+                    <div class="pd-ind-featured-card-top">
+                        <span class="pd-ind-featured-badge pd-ind-featured-badge-new">NEW ARRIVAL</span>
+                        <button type="button" class="pd-ind-featured-wishlist" aria-label="Add to wishlist"><i
+                                class="bi bi-heart"></i></button>
+                    </div>
+                    <div class="pd-ind-featured-image-wrap">
+                        <span class="pd-ind-featured-discount">-15%</span>
+                        <img src="assets/images/medicine-vitamin.webp" alt="Vitamin D3 Capsules">
+                        <div class="pd-ind-featured-quick">
+                            <a href="404.html"><button type="button"><i class="bi bi-eye"></i> Quick View</button></a>
+                        </div>
+                    </div>
+                    <div class="pd-ind-featured-content">
+                        <span class="pd-ind-featured-category">Vitamins</span>
+                        <h3 class="pd-ind-featured-name">Vitamin D3 1000 IU Capsules</h3>
+                        <p class="pd-ind-featured-info">Daily nutritional support for healthy bones and immunity.</p>
+                        <div class="pd-ind-featured-rating">
+                            <span><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star"></i></span>
+                            <strong>4.6</strong>
+                            <small>(89)</small>
+                        </div>
+                        <div class="pd-ind-featured-bottom">
+                            <div class="pd-ind-featured-price"><strong>₹8.49</strong><del>₹9.99</del></div>
+                            <!--- Medicine Card 2 --->
+                            <button type="button" class="pd-ind-featured-cart" data-id="medicine-vitamin"
+                                data-name="Vitamin D3 1000 IU Capsules" data-category="Vitamins" data-price="8.49"
+                                data-image="assets/images/medicine-vitamin.webp"><i
+                                    class="bi bi-bag-plus"></i><span>Add</span></button>
+                        </div>
+                    </div>
+                </div>
+                <!--- Medicine Card 3 --->
+                <div class="pd-ind-featured-card">
+                    <div class="pd-ind-featured-card-top">
+                        <span class="pd-ind-featured-badge">POPULAR</span>
+                        <button type="button" class="pd-ind-featured-wishlist" aria-label="Add to wishlist"><i
+                                class="bi bi-heart"></i></button>
+                    </div>
+                    <div class="pd-ind-featured-image-wrap">
+                        <span class="pd-ind-featured-discount">-18%</span>
+                        <img src="assets/images/medicine-cough.webp" alt="Cough Relief Syrup">
+                        <div class="pd-ind-featured-quick">
+                            <a href="404.html"><button type="button"><i class="bi bi-eye"></i> Quick View</button></a>
+                        </div>
+                    </div>
+                    <div class="pd-ind-featured-content">
+                        <span class="pd-ind-featured-category">Cold & Flu</span>
+                        <h3 class="pd-ind-featured-name">Cough Relief Syrup</h3>
+                        <p class="pd-ind-featured-info">Soothing cough relief with a refreshing and gentle formula.</p>
+                        <div class="pd-ind-featured-rating">
+                            <span><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i></span>
+                            <strong>4.9</strong>
+                            <small>(156)</small>
+                        </div>
+                        <div class="pd-ind-featured-bottom">
+                            <div class="pd-ind-featured-price"><strong>₹7.25</strong><del>₹8.85</del></div>
+                            <!--- Medicine Card 3 --->
+                            <button type="button" class="pd-ind-featured-cart" data-id="medicine-cough"
+                                data-name="Cough Relief Syrup" data-category="Cold & Flu" data-price="7.25"
+                                data-image="assets/images/medicine-cough.webp"><i
+                                    class="bi bi-bag-plus"></i><span>Add</span></button>
+                        </div>
+                    </div>
+                </div>
+                <!--- Medicine Card 4 --->
+                <div class="pd-ind-featured-card">
+                    <div class="pd-ind-featured-card-top">
+                        <span class="pd-ind-featured-badge pd-ind-featured-badge-care">PHARMACIST PICK</span>
+                        <button type="button" class="pd-ind-featured-wishlist" aria-label="Add to wishlist"><i
+                                class="bi bi-heart"></i></button>
+                    </div>
+                    <div class="pd-ind-featured-image-wrap">
+                        <span class="pd-ind-featured-discount">-12%</span>
+                        <img src="assets/images/medicine-first-aid.webp" alt="First Aid Healthcare Kit">
+                        <div class="pd-ind-featured-quick">
+                            <a href="404.html"><button type="button"><i class="bi bi-eye"></i> Quick View</button></a>
+                        </div>
+                    </div>
+                    <div class="pd-ind-featured-content">
+                        <span class="pd-ind-featured-category">First Aid</span>
+                        <h3 class="pd-ind-featured-name">Complete First Aid Kit</h3>
+                        <p class="pd-ind-featured-info">Essential healthcare supplies for everyday emergencies.</p>
+                        <div class="pd-ind-featured-rating">
+                            <span><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star"></i></span>
+                            <strong>4.7</strong>
+                            <small>(72)</small>
+                        </div>
+                        <div class="pd-ind-featured-bottom">
+                            <div class="pd-ind-featured-price"><strong>₹14.99</strong><del>₹16.99</del></div>
+                            <!--- Medicine Card 4 --->
+                            <button type="button" class="pd-ind-featured-cart" data-id="medicine-first-aid"
+                                data-name="Complete First Aid Kit" data-category="First Aid" data-price="14.99"
+                                data-image="assets/images/medicine-first-aid.webp"><i
+                                    class="bi bi-bag-plus"></i><span>Add</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--- Featured Trust Strip --->
+            <div class="pd-ind-featured-trust">
+                <div class="pd-ind-featured-trust-item">
+                    <span><i class="bi bi-patch-check-fill"></i></span>
+                    <div><strong>Genuine Products</strong><small>Quality checked medicines</small></div>
+                </div>
+                <div class="pd-ind-featured-trust-divider"></div>
+                <div class="pd-ind-featured-trust-item">
+                    <span><i class="bi bi-truck"></i></span>
+                    <div><strong>Fast Delivery</strong><small>Delivered to your doorstep</small></div>
+                </div>
+                <div class="pd-ind-featured-trust-divider"></div>
+                <div class="pd-ind-featured-trust-item">
+                    <span><i class="bi bi-shield-lock-fill"></i></span>
+                    <div><strong>Secure Shopping</strong><small>Your information stays safe</small></div>
+                </div>
+                <div class="pd-ind-featured-trust-divider"></div>
+                <div class="pd-ind-featured-trust-item">
+                    <span><i class="bi bi-headset"></i></span>
+                    <div><strong>Expert Support</strong><small>Pharmacist assistance</small></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--- Featured Medicines Section End --->
+
+    <!--- How It Works Section Start --->
+    <section class="pd-ind-how">
+        <div class="container">
+            <div class="pd-ind-how-heading">
+                <span class="pd-ind-how-eyebrow"><i class="bi bi-signpost-2"></i> SIMPLE HEALTHCARE JOURNEY</span>
+                <h2 class="pd-ind-how-title">How It <span>Works</span></h2>
+                <p class="pd-ind-how-des">Getting your medicines delivered is simple. Just follow four easy steps and
+                    let us take care of the rest.</p>
+            </div>
+            <!--- How It Works Journey --->
+            <div class="pd-ind-how-journey">
+                <div class="pd-ind-how-line"><span></span></div>
+                <!--- Step 01 --->
+                <div class="pd-ind-how-step">
+                    <div class="pd-ind-how-step-visual">
+                        <div class="pd-ind-how-number">01</div>
+                        <div class="pd-ind-how-icon"><i class="bi bi-search"></i></div>
+                        <div class="pd-ind-how-float pd-ind-how-float-one"><i class="bi bi-capsule"></i></div>
+                    </div>
+                    <div class="pd-ind-how-step-content">
+                        <span class="pd-ind-how-step-label">STEP 01</span>
+                        <h3 class="pd-ind-how-step-title">Find Your Medicine</h3>
+                        <p class="pd-ind-how-step-des">Search through our wide selection of genuine medicines and
+                            healthcare essentials.</p>
+                    </div>
+                </div>
+                <!--- Step 02 --->
+                <div class="pd-ind-how-step pd-ind-how-step-reverse">
+                    <div class="pd-ind-how-step-visual">
+                        <div class="pd-ind-how-number">02</div>
+                        <div class="pd-ind-how-icon"><i class="bi bi-file-earmark-medical"></i></div>
+                        <div class="pd-ind-how-float pd-ind-how-float-two"><i class="bi bi-prescription2"></i></div>
+                    </div>
+                    <div class="pd-ind-how-step-content">
+                        <span class="pd-ind-how-step-label">STEP 02</span>
+                        <h3 class="pd-ind-how-step-title">Upload Prescription</h3>
+                        <p class="pd-ind-how-step-des">Have a prescription? Upload it securely and our pharmacy team
+                            will review it for you.</p>
+                    </div>
+                </div>
+                <!--- Step 03 --->
+                <div class="pd-ind-how-step">
+                    <div class="pd-ind-how-step-visual">
+                        <div class="pd-ind-how-number">03</div>
+                        <div class="pd-ind-how-icon"><i class="bi bi-person-check"></i></div>
+                        <div class="pd-ind-how-float pd-ind-how-float-three"><i class="bi bi-shield-check"></i></div>
+                    </div>
+                    <div class="pd-ind-how-step-content">
+                        <span class="pd-ind-how-step-label">STEP 03</span>
+                        <h3 class="pd-ind-how-step-title">Pharmacist Review</h3>
+                        <p class="pd-ind-how-step-des">Our qualified pharmacists carefully verify your order before it
+                            is prepared.</p>
+                    </div>
+                </div>
+                <!--- Step 04 --->
+                <div class="pd-ind-how-step pd-ind-how-step-reverse">
+                    <div class="pd-ind-how-step-visual">
+                        <div class="pd-ind-how-number">04</div>
+                        <div class="pd-ind-how-icon"><i class="bi bi-truck"></i></div>
+                        <div class="pd-ind-how-float pd-ind-how-float-four"><i class="bi bi-heart-pulse"></i></div>
+                    </div>
+                    <div class="pd-ind-how-step-content">
+                        <span class="pd-ind-how-step-label">STEP 04</span>
+                        <h3 class="pd-ind-how-step-title">Fast Doorstep Delivery</h3>
+                        <p class="pd-ind-how-step-des">Your medicines are safely packed and delivered directly to your
+                            doorstep.</p>
+                    </div>
+                </div>
+            </div>
+            <!--- How It Works Bottom Card --->
+            <div class="pd-ind-how-bottom">
+                <div class="pd-ind-how-bottom-icon"><i class="bi bi-lightning-charge-fill"></i></div>
+                <div class="pd-ind-how-bottom-content">
+                    <strong>Need your medicines quickly?</strong>
+                    <span>Our fast delivery service gets your essentials to you without the unnecessary wait.</span>
+                </div>
+                <a href="medicines.html" class="pd-ind-how-bottom-btn">Start Shopping <i
+                        class="bi bi-arrow-up-right"></i></a>
+            </div>
+        </div>
+    </section>
+    <!--- How It Works Section End --->
+
+    <!--- Fast Delivery Experience Section Start --->
+    <section class="pd-ind-fast">
+        <div class="container">
+            <div class="pd-ind-fast-card">
+                <!--- Fast Delivery Visual --->
+                <div class="pd-ind-fast-visual">
+                    <div class="pd-ind-fast-circle pd-ind-fast-circle-one"></div>
+                    <div class="pd-ind-fast-circle pd-ind-fast-circle-two"></div>
+                    <div class="pd-ind-fast-route">
+                        <span class="pd-ind-fast-route-dot pd-ind-fast-route-dot-one"></span>
+                        <span class="pd-ind-fast-route-dot pd-ind-fast-route-two"></span>
+                        <span class="pd-ind-fast-route-dot pd-ind-fast-route-three"></span>
+                        <span class="pd-ind-fast-route-line"></span>
+                    </div>
+                    <div class="pd-ind-fast-delivery-icon">
+                        <i class="bi bi-box-seam"></i>
+                    </div>
+                    <div class="pd-ind-fast-bike">
+                        <i class="bi bi-bicycle"></i>
+                    </div>
+                    <!--- Delivery Floating Cards --->
+                    <div class="pd-ind-fast-status pd-ind-fast-status-top">
+                        <div class="pd-ind-fast-status-icon"><i class="bi bi-check2-circle"></i></div>
+                        <div>
+                            <small>Order Confirmed</small>
+                            <strong>Pharmacy Approved</strong>
+                        </div>
+                    </div>
+                    <div class="pd-ind-fast-status pd-ind-fast-status-bottom">
+                        <div class="pd-ind-fast-status-icon"><i class="bi bi-geo-alt"></i></div>
+                        <div>
+                            <small>Delivery Status</small>
+                            <strong>On the way to you</strong>
+                        </div>
+                    </div>
+                    <!--- Floating Medical Icons --->
+                    <div class="pd-ind-fast-float pd-ind-fast-float-one"><i class="bi bi-capsule"></i></div>
+                    <div class="pd-ind-fast-float pd-ind-fast-float-two"><i class="bi bi-heart-pulse"></i></div>
+                    <div class="pd-ind-fast-float pd-ind-fast-float-three"><i class="bi bi-shield-check"></i></div>
+                </div>
+                <!--- Fast Delivery Content --->
+                <div class="pd-ind-fast-content">
+                    <span class="pd-ind-fast-eyebrow"><i class="bi bi-lightning-charge-fill"></i> FAST & RELIABLE
+                        DELIVERY</span>
+                    <h2 class="pd-ind-fast-title">Your Health Shouldn't <span>Have To Wait.</span></h2>
+                    <p class="pd-ind-fast-des">From the moment you place your order, we work to get your medicines
+                        packed, verified and delivered to your doorstep as quickly as possible.</p>
+                    <!--- Delivery Highlights --->
+                    <div class="pd-ind-fast-highlights">
+                        <div class="pd-ind-fast-highlight">
+                            <div class="pd-ind-fast-highlight-icon"><i class="bi bi-clock-history"></i></div>
+                            <div>
+                                <strong>Quick Processing</strong>
+                                <span>Orders prepared without unnecessary delays.</span>
+                            </div>
+                        </div>
+                        <div class="pd-ind-fast-highlight">
+                            <div class="pd-ind-fast-highlight-icon"><i class="bi bi-box-seam"></i></div>
+                            <div>
+                                <strong>Safe Packaging</strong>
+                                <span>Your medicines are carefully packed for delivery.</span>
+                            </div>
+                        </div>
+                        <div class="pd-ind-fast-highlight">
+                            <div class="pd-ind-fast-highlight-icon"><i class="bi bi-geo-alt"></i></div>
+                            <div>
+                                <strong>Doorstep Tracking</strong>
+                                <span>Stay informed while your order is on the way.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--- Fast Delivery CTA --->
+                    <div class="pd-ind-fast-actions">
+                        <a href="medicines.html" class="pd-ind-fast-btn">Order Medicines <i
+                                class="bi bi-arrow-up-right"></i></a>
+                        <span class="pd-ind-fast-note"><i class="bi bi-shield-check"></i> Safe & trusted healthcare
+                            delivery</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--- Fast Delivery Experience Section End --->
+
+    <!--- Customer Reviews Section Start --->
+    <section class="pd-ind-reviews">
+        <div class="container">
+            <div class="pd-ind-reviews-heading">
+                <span class="pd-ind-reviews-eyebrow"><i class="bi bi-chat-heart-fill"></i> CUSTOMER REVIEWS</span>
+                <h2 class="pd-ind-reviews-title">Trusted By People Who <span>Care About Their Health.</span></h2>
+                <p class="pd-ind-reviews-des">Real experiences from customers who choose us for convenient, reliable and
+                    trusted medicine delivery.</p>
+            </div>
+            <div class="pd-ind-reviews-wrapper">
+                <!--- Reviews Side Intro --->
+                <div class="pd-ind-reviews-intro">
+                    <div class="pd-ind-reviews-rating">
+                        <strong>4.9</strong>
+                        <div class="pd-ind-reviews-stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <span>Based on 2,000+ customer reviews</span>
+                    </div>
+                    <div class="pd-ind-reviews-trust">
+                        <div class="pd-ind-reviews-trust-icon"><i class="bi bi-patch-check-fill"></i></div>
+                        <div>
+                            <strong>Verified Experiences</strong>
+                            <span>Every review comes from a real customer.</span>
+                        </div>
+                    </div>
+                    <div class="pd-ind-reviews-quote">
+                        <i class="bi bi-quote"></i>
+                        <span>“Healthcare feels easier when you know you can count on the service.”</span>
+                    </div>
+                </div>
+                <!--- Featured Review --->
+                <div class="pd-ind-reviews-featured">
+                    <div class="pd-ind-reviews-featured-top">
+                        <div class="pd-ind-reviews-user">
+                            <div class="pd-ind-reviews-avatar">AR</div>
+                            <div>
+                                <strong>Arun Raj</strong>
+                                <span><i class="bi bi-patch-check-fill"></i> Verified Customer</span>
+                            </div>
+                        </div>
+                        <div class="pd-ind-reviews-featured-stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                    </div>
+                    <div class="pd-ind-reviews-featured-quote">
+                        <p>“Ordering my medicines was incredibly simple. I uploaded my prescription, received
+                            confirmation quickly, and the medicines arrived safely at my doorstep. The whole experience
+                            felt smooth and trustworthy.”</p>
+                    </div>
+                    <div class="pd-ind-reviews-featured-bottom">
+                        <span><i class="bi bi-calendar3"></i> Recent Review</span>
+                        <span><i class="bi bi-heart-fill"></i> Loved the experience</span>
+                    </div>
+                </div>
+            </div>
+            <!--- Review Cards --->
+            <div class="pd-ind-reviews-cards">
+                <div class="pd-ind-reviews-card pd-ind-reviews-card-active" data-review="0">
+                    <div class="pd-ind-reviews-card-top">
+                        <div class="pd-ind-reviews-small-avatar">SK</div>
+                        <div>
+                            <strong>Sneha K.</strong>
+                            <span>Verified Customer</span>
+                        </div>
+                        <i class="bi bi-patch-check-fill"></i>
+                    </div>
+                    <div class="pd-ind-reviews-card-stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                    <p>“Very easy to order and the delivery was much faster than I expected.”</p>
+                </div>
+                <div class="pd-ind-reviews-card" data-review="1">
+                    <div class="pd-ind-reviews-card-top">
+                        <div class="pd-ind-reviews-small-avatar">MK</div>
+                        <div>
+                            <strong>Manoj K.</strong>
+                            <span>Verified Customer</span>
+                        </div>
+                        <i class="bi bi-patch-check-fill"></i>
+                    </div>
+                    <div class="pd-ind-reviews-card-stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                    <p>“The prescription upload process is simple and the service feels very professional.”</p>
+                </div>
+                <div class="pd-ind-reviews-card" data-review="2">
+                    <div class="pd-ind-reviews-card-top">
+                        <div class="pd-ind-reviews-small-avatar">NP</div>
+                        <div>
+                            <strong>Nisha P.</strong>
+                            <span>Verified Customer</span>
+                        </div>
+                        <i class="bi bi-patch-check-fill"></i>
+                    </div>
+                    <div class="pd-ind-reviews-card-stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                    <p>“I love how convenient it is to get my regular medicines without visiting a pharmacy.”</p>
+                </div>
+                <div class="pd-ind-reviews-card" data-review="3">
+                    <div class="pd-ind-reviews-card-top">
+                        <div class="pd-ind-reviews-small-avatar">VK</div>
+                        <div>
+                            <strong>Vijay K.</strong>
+                            <span>Verified Customer</span>
+                        </div>
+                        <i class="bi bi-patch-check-fill"></i>
+                    </div>
+                    <div class="pd-ind-reviews-card-stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                    <p>“Everything from selecting medicines to receiving the order was straightforward.”</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--- Customer Reviews Section End --->
+
+    <!--- Final CTA Section Start --->
+    <section class="pd-ind-final-cta">
+        <div class="container">
+            <div class="pd-ind-final-cta-wrapper">
+                <div class="pd-ind-final-cta-content">
+                    <span class="pd-ind-final-cta-eyebrow"><i class="bi bi-heart-pulse-fill"></i> YOUR HEALTH,
+                        DELIVERED</span>
+                    <h2 class="pd-ind-final-cta-title">Your Medicines Are Just <span>One Click Away.</span></h2>
+                    <p class="pd-ind-final-cta-des">Skip the queue, upload your prescription or find your medicines
+                        online and get trusted healthcare essentials delivered to your doorstep.</p>
+                    <div class="pd-ind-final-cta-buttons">
+                        <a href="medicines.html" class="pd-ind-final-cta-primary"><span>Shop Medicines</span><i
+                                class="bi bi-arrow-right"></i></a>
+                        <a href="prescription.html" class="pd-ind-final-cta-secondary"><i
+                                class="bi bi-cloud-arrow-up"></i><span>Upload Prescription</span></a>
+                    </div>
+                    <div class="pd-ind-final-cta-trust">
+                        <div class="pd-ind-final-cta-trust-item"><i class="bi bi-shield-check"></i><span>Trusted
+                                Medicines</span></div>
+                        <div class="pd-ind-final-cta-trust-item"><i class="bi bi-lightning-charge"></i><span>Fast
+                                Delivery</span></div>
+                        <div class="pd-ind-final-cta-trust-item"><i class="bi bi-headset"></i><span>Pharmacist
+                                Support</span></div>
+                    </div>
+                </div>
+                <!--- CTA Visual --->
+                <div class="pd-ind-final-cta-visual">
+                    <div class="pd-ind-final-cta-circle pd-ind-final-cta-circle-one"></div>
+                    <div class="pd-ind-final-cta-circle pd-ind-final-cta-circle-two"></div>
+                    <div class="pd-ind-final-cta-plus pd-ind-final-cta-plus-one"><i class="bi bi-plus-lg"></i></div>
+                    <div class="pd-ind-final-cta-plus pd-ind-final-cta-plus-two"><i class="bi bi-plus-lg"></i></div>
+                    <!--- Delivery Box --->
+                    <div class="pd-ind-final-cta-box">
+                        <div class="pd-ind-final-cta-box-top">
+                            <span><i class="bi bi-shield-check"></i> HEALTHCARE</span>
+                            <i class="bi bi-check-circle-fill"></i>
+                        </div>
+                        <div class="pd-ind-final-cta-box-cross"><i class="bi bi-plus-lg"></i></div>
+                        <div class="pd-ind-final-cta-box-lines">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <!--- Floating Capsule --->
+                    <div class="pd-ind-final-cta-capsule pd-ind-final-cta-capsule-one">
+                        <i class="bi bi-capsule"></i>
+                    </div>
+                    <div class="pd-ind-final-cta-capsule pd-ind-final-cta-capsule-two">
+                        <i class="bi bi-capsule"></i>
+                    </div>
+                    <!--- Delivery Badge --->
+                    <div class="pd-ind-final-cta-delivery">
+                        <div class="pd-ind-final-cta-delivery-icon"><i class="bi bi-truck"></i></div>
+                        <div>
+                            <small>ON THE WAY</small>
+                            <strong>Fast & Safe</strong>
+                        </div>
+                        <i class="bi bi-check-circle-fill"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--- Final CTA Section End --->
+
+    <!--- Footer --->
+    <div id="pd-footer-component"></div>
+
+    <!--- Js Files --->
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="assets/js/components.js"></script>
+    <script src="assets/js/loader.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/footer.js"></script>
+
+    <!-- Page JS -->
+    <script src="assets/js/index.js"></script>
+</body>
+
+</html>

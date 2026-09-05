@@ -1,0 +1,532 @@
+/*--- Global Root Variables Start ---*/
+:root {
+    --pd-primary: #2563EB;
+    --pd-primary-dark: #1D4ED8;
+    --pd-primary-light: #DBEAFE;
+    --pd-secondary: #14B8A6;
+    --pd-secondary-dark: #0F766E;
+    --pd-accent: #F59E0B;
+    --pd-success: #16A34A;
+    --pd-danger: #DC2626;
+    --pd-warning: #F59E0B;
+    --pd-dark: #0F172A;
+    --pd-dark-light: #334155;
+    --pd-text: #475569;
+    --pd-text-light: #64748B;
+    --pd-white: #FFFFFF;
+    --pd-light: #F8FAFC;
+    --pd-light-blue: #EFF6FF;
+    --pd-border: #E2E8F0;
+    --pd-border-light: #F1F5F9;
+    --pd-body: #FFFFFF;
+    --pd-card: #FFFFFF;
+    --pd-shadow-sm: 0 4px 15px rgba(15, 23, 42, .06);
+    --pd-shadow: 0 10px 30px rgba(15, 23, 42, .08);
+    --pd-shadow-lg: 0 20px 50px rgba(15, 23, 42, .12);
+    --pd-radius-sm: 8px;
+    --pd-radius: 14px;
+    --pd-radius-lg: 24px;
+    --pd-radius-pill: 999px;
+    --pd-transition: all .3s ease;
+    --pd-font-primary: "Poppins", sans-serif;
+    --pd-font-secondary: "Inter", sans-serif;
+    --pd-container-width: 1320px;
+}
+
+/*--- Global Root Variables End ---*/
+/*--- Global Reset Start ---*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--pd-body);
+    color: var(--pd-text);
+    font-family: var(--pd-font-primary);
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    width: 3px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--pd-light);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--pd-primary);
+    border-radius: var(--pd-radius-pill);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: var(--pd-primary-dark);
+}
+
+::selection {
+    background: var(--pd-primary);
+    color: var(--pd-white);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--pd-transition);
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
+button {
+    border: 0;
+    outline: 0;
+}
+
+ul,
+ol {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    color: var(--pd-dark);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+p {
+    margin: 0;
+}
+
+/*--- Global Reset End ---*/
+/*--- Global Typography Start ---*/
+.pd-global-title {
+    font-family: var(--pd-font-primary);
+    font-weight: 700;
+    color: var(--pd-dark);
+}
+
+.pd-global-subtitle {
+    font-family: var(--pd-font-primary);
+    font-weight: 600;
+    color: var(--pd-primary);
+}
+
+.pd-global-text {
+    font-family: var(--pd-font-secondary);
+    color: var(--pd-text);
+}
+
+.pd-global-description {
+    font-family: var(--pd-font-secondary);
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--pd-text-light);
+}
+
+.pd-global-small {
+    font-size: 14px;
+    color: var(--pd-text-light);
+}
+
+.pd-global-highlight {
+    color: var(--pd-primary);
+}
+
+.pd-global-success {
+    color: var(--pd-success);
+}
+
+.pd-global-danger {
+    color: var(--pd-danger);
+}
+
+.pd-global-warning {
+    color: var(--pd-warning);
+}
+
+/*--- Global Typography End ---*/
+/*--- Global Container Start ---*/
+.pd-global-container {
+    width: 100%;
+    max-width: var(--pd-container-width);
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.pd-global-section {
+    width: 100%;
+    position: relative;
+}
+
+.pd-global-section-padding {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.pd-global-section-padding-sm {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+/*--- Global Container End ---*/
+/*--- Global Buttons Start ---*/
+.pd-global-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 13px 25px;
+    border-radius: var(--pd-radius-pill);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+    cursor: pointer;
+    transition: var(--pd-transition);
+}
+
+.pd-global-btn-primary {
+    background: var(--pd-primary);
+    color: var(--pd-white);
+}
+
+.pd-global-btn-primary:hover {
+    background: var(--pd-primary-dark);
+    color: var(--pd-white);
+    transform: translateY(-2px);
+    box-shadow: var(--pd-shadow);
+}
+
+.pd-global-btn-secondary {
+    background: var(--pd-secondary);
+    color: var(--pd-white);
+}
+
+.pd-global-btn-secondary:hover {
+    background: var(--pd-secondary-dark);
+    color: var(--pd-white);
+    transform: translateY(-2px);
+    box-shadow: var(--pd-shadow);
+}
+
+.pd-global-btn-outline {
+    background: transparent;
+    color: var(--pd-primary);
+    border: 1px solid var(--pd-primary);
+}
+
+.pd-global-btn-outline:hover {
+    background: var(--pd-primary);
+    color: var(--pd-white);
+    transform: translateY(-2px);
+}
+
+.pd-global-btn-light {
+    background: var(--pd-light-blue);
+    color: var(--pd-primary);
+}
+
+.pd-global-btn-light:hover {
+    background: var(--pd-primary);
+    color: var(--pd-white);
+    transform: translateY(-2px);
+}
+
+/*--- Global Buttons End ---*/
+/*--- Global Cards Start ---*/
+.pd-global-card {
+    background: var(--pd-card);
+    border: 1px solid var(--pd-border-light);
+    border-radius: var(--pd-radius);
+    box-shadow: var(--pd-shadow-sm);
+    transition: var(--pd-transition);
+}
+
+.pd-global-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--pd-shadow);
+}
+
+.pd-global-card-lg {
+    background: var(--pd-card);
+    border: 1px solid var(--pd-border-light);
+    border-radius: var(--pd-radius-lg);
+    box-shadow: var(--pd-shadow-sm);
+    transition: var(--pd-transition);
+}
+
+.pd-global-card-lg:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--pd-shadow-lg);
+}
+
+/*--- Global Cards End ---*/
+/*--- Global Form Start ---*/
+.pd-global-input {
+    width: 100%;
+    height: 52px;
+    padding: 0 17px;
+    border: 1px solid var(--pd-border);
+    border-radius: var(--pd-radius-sm);
+    background: var(--pd-white);
+    color: var(--pd-dark);
+    font-size: 15px;
+    outline: none;
+    transition: var(--pd-transition);
+}
+
+.pd-global-input::placeholder {
+    color: var(--pd-text-light);
+}
+
+.pd-global-input:focus {
+    border-color: var(--pd-primary);
+    box-shadow: 0 0 0 3px var(--pd-primary-light);
+}
+
+.pd-global-textarea {
+    width: 100%;
+    min-height: 130px;
+    padding: 15px 17px;
+    border: 1px solid var(--pd-border);
+    border-radius: var(--pd-radius-sm);
+    background: var(--pd-white);
+    color: var(--pd-dark);
+    font-size: 15px;
+    outline: none;
+    resize: vertical;
+    transition: var(--pd-transition);
+}
+
+.pd-global-textarea::placeholder {
+    color: var(--pd-text-light);
+}
+
+.pd-global-textarea:focus {
+    border-color: var(--pd-primary);
+    box-shadow: 0 0 0 3px var(--pd-primary-light);
+}
+
+/*--- Global Form End ---*/
+/*--- Global Badge Start ---*/
+.pd-global-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 12px;
+    border-radius: var(--pd-radius-pill);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.pd-global-badge-primary {
+    background: var(--pd-primary-light);
+    color: var(--pd-primary);
+}
+
+.pd-global-badge-success {
+    background: #DCFCE7;
+    color: var(--pd-success);
+}
+
+.pd-global-badge-warning {
+    background: #FEF3C7;
+    color: #B45309;
+}
+
+.pd-global-badge-danger {
+    background: #FEE2E2;
+    color: var(--pd-danger);
+}
+
+/*--- Global Badge End ---*/
+/*--- Global Overlay Start ---*/
+.pd-global-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/*--- Global Overlay End ---*/
+/*--- Global Image Start ---*/
+.pd-global-image-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pd-global-image-contain {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/*--- Global Image End ---*/
+/*--- Global Animation Start ---*/
+.pd-global-transition {
+    transition: var(--pd-transition);
+}
+
+.pd-global-hover-up {
+    transition: var(--pd-transition);
+}
+
+.pd-global-hover-up:hover {
+    transform: translateY(-5px);
+}
+
+.pd-global-hover-scale {
+    transition: var(--pd-transition);
+}
+
+.pd-global-hover-scale:hover {
+    transform: scale(1.03);
+}
+
+/*--- Global Animation End ---*/
+/*--- Global Utility Start ---*/
+.pd-global-pointer {
+    cursor: pointer;
+}
+
+.pd-global-relative {
+    position: relative;
+}
+
+.pd-global-absolute {
+    position: absolute;
+}
+
+.pd-global-hidden {
+    overflow: hidden;
+}
+
+.pd-global-radius {
+    border-radius: var(--pd-radius);
+}
+
+.pd-global-radius-lg {
+    border-radius: var(--pd-radius-lg);
+}
+
+.pd-global-radius-pill {
+    border-radius: var(--pd-radius-pill);
+}
+
+.pd-global-shadow {
+    box-shadow: var(--pd-shadow);
+}
+
+.pd-global-shadow-lg {
+    box-shadow: var(--pd-shadow-lg);
+}
+
+/*--- Global Utility End ---*/
+/*--- Global Responsive 1050px Start ---*/
+@media(max-width:1050px) {
+    .pd-global-section-padding {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .pd-global-section-padding-sm {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+/*--- Global Responsive 1050px End ---*/
+/*--- Global Responsive 991px Start ---*/
+@media(max-width:991px) {
+    body {
+        font-size: 15px;
+    }
+
+    .pd-global-section-padding {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .pd-global-section-padding-sm {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+/*--- Global Responsive 991px End ---*/
+/*--- Global Responsive 767px Start ---*/
+@media(max-width:767px) {
+    .pd-global-section-padding {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .pd-global-section-padding-sm {
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+    .pd-global-description {
+        font-size: 15px;
+    }
+
+    .pd-global-btn {
+        padding: 12px 21px;
+        font-size: 14px;
+    }
+}
+
+/*--- Global Responsive 767px End ---*/
+/*--- Global Responsive 575px Start ---*/
+@media(max-width:575px) {
+    .pd-global-container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .pd-global-section-padding {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .pd-global-section-padding-sm {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .pd-global-btn {
+        width: 100%;
+        padding: 12px 18px;
+    }
+}
+
+/*--- Global Responsive 575px End ---*/
